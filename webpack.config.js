@@ -3,10 +3,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HTMLWebpackPlugin({template: './src/index.html'});
 
-// const copyPlugin = new CopyWebpackPlugin([{
-//     from:'./src/it-spa.css'
-// }]); 
-
 module.exports = {
     entry: './src/it-spa.js',
     output: {
