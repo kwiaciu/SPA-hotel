@@ -1,0 +1,21 @@
+$dark-olive-green: #6C442E;
+$sienna: #8D6644;
+$light-grey: #D2CECD;
+$black: #302D25;
+$gray: #90715F;
+
+body {
+    background-color: $light-grey;
+
+    h2 {
+        color: $dark-olive-green;
+    }
+
+    h3 {
+        color: $sienna;
+    }
+}
+
+.navbar {
+    background-color: $black;
+} 
