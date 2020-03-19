@@ -1,18 +1,20 @@
+const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const htmlPlugin = new HTMLWebpackPlugin({template: './src/index.html'});
+const copyPlugin = new CopyWebpackPlugin([{from: './src/assets'}]);
 
 module.exports = {
     entry: './src/it-spa.js',
     output: {
-        path: __dirname + '/dist',
-        filename: '[name].js',
-        publicPath: '/',
+        path: path.resolve(__dirname, "dist"),
+        filename: '[name].bundle.js',
+        // publicPath: '/'
 
     },
-    // plugins: [htmlPlugin, copyPlugin],
-    plugins: [htmlPlugin],
+    plugins: [htmlPlugin, copyPlugin],
+    // plugins: [htmlPlugin],
     devServer: {
         port: 8888,
         historyApiFallback: true,
