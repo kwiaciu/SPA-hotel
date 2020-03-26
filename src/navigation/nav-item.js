@@ -3,7 +3,7 @@ import $ from 'jquery';
 export const navItem = (text, click) => {
     const navItem = $('<li class="nav-item"></li>');
 
-    const anchor = $('<a class="btn btn-link"></a>').on('click', click).text(text);
+    const anchor = $('<a class="btn"></a>').on('click', click).text(text);
 
     navItem.append(anchor);
 

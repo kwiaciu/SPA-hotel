@@ -5,9 +5,9 @@ import { routes } from '../router/routes'
  
 export const nav = () => {
     const navbar = $(`
-    <nav class="navbar navbar-expand">
-        <span class="navbar-brand">IT SPA</span>
-        <ul class="navbar-nav mr-auto"></ul>
+    <nav class="navbar">
+        <span class="nav-logo">Passiflora Hotel & Spa</span>
+        <ul class="nav-list"></ul>
     </nav>
     `);
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:db": "json-server --watch database.json",
-    "dev:client": "webpack-dev-server --mode=development",
+    "start:server": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
   },
   "keywords": [],
@@ -24,6 +24,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1"
   }
 }

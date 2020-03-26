@@ -7,6 +7,7 @@
       "beds": 1,
       "guests": 1,
       "price": 170,
+      "imgsrc": "../dist/hotel01.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -26,6 +27,7 @@
       "beds": 1,
       "guests": 1,
       "price": 170,
+      "imgsrc": "../dist/hotel02.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -45,6 +47,7 @@
       "beds": 1,
       "guests": 2,
       "price": 240,
+      "imgsrc": "../dist/hotel03.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -64,6 +67,7 @@
       "beds": 1,
       "guests": 2,
       "price": 240,
+      "imgsrc": "../dist/hotel04.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -83,6 +87,7 @@
       "beds": 2,
       "guests": 3,
       "price": 290,
+      "imgsrc": "../dist/hotel05.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -102,6 +107,7 @@
       "beds": 2,
       "guests": 3,
       "price": 290,
+      "imgsrc": "../dist/hotel06.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -121,6 +127,7 @@
       "beds": 4,
       "guests": 4,
       "price": 340,
+      "imgsrc": "../dist/hotel07.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -140,6 +147,7 @@
       "beds": 4,
       "guests": 4,
       "price": 340,
+      "imgsrc": "../dist/hotel08.jpg",
       "occupied": [
         {
           "occupiedFrom": "",
@@ -160,49 +168,60 @@
       "name": "Masaż rozgrzanym monitorem",
       "area": "back",
       "time": 30,
-      "price": 80
+      "price": 80,
+      "imgsrc": "../dist/spa01.jpg"
     },
     {
       "id": 2,
       "name": "Biczowanie kablem od myszy",
       "area": "back",
       "time": 20,
-      "price": 70
+      "price": 70,
+      "imgsrc": "../dist/spa02.jpg"
+
     },
     {
       "id": 3,
       "name": "Peeling odłamkami płyty CD",
       "area": "face",
       "time": 15,
-      "price": 50
+      "price": 50,
+      "imgsrc": "../dist/spa03.jpg"
     },
     {
       "id": 4,
       "name": "Pedicure woskiem z USB",
       "area": "legs",
       "time": 25,
-      "price": 100
+      "price": 100,
+      "imgsrc": "../dist/spa04.jpg"
+
     },
     {
       "id": 5,
       "name": "Manicure analogowo-cyfrowy",
       "area": "hands",
       "time": 45,
-      "price": 150
+      "price": 150,
+      "imgsrc": "../dist/spa05.jpg"
     },
     {
       "id": 6,
       "name": "Kąpiel w gorącej kawie",
       "area": "body",
       "time": 60,
-      "price": 200
+      "price": 200,
+      "imgsrc": "../dist/spa06.jpg"
+
     },
     {
       "id": 7,
       "name": "Depilacja dyskiem twardym",
       "area": "body",
       "time": 45,
-      "price": 120
+      "price": 120,
+      "imgsrc": "../dist/spa07.jpg"
+
     }
   ]
 }

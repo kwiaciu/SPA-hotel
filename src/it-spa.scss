@@ -6,9 +6,31 @@ $gray: #90715F;
 
 body {
     background-color: $light-grey;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    
+
+    .nav-logo, h1 {
+        font-family: 'Cinzel', serif;
+        font-size: 1.5rem;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+
+   
+
+    }
+    
+    .front-page-header {
+        position: relative;
+        top: 20vh;
+        left: 20%;
+    }
+
 
     h2 {
-        color: $dark-olive-green;
+        // color: $dark-olive-green;
     }
 
     h3 {
@@ -16,6 +38,67 @@ body {
     }
 }
 
+main {
+    margin: 1rem;
+}
+
+.home {
+    margin-top: 15vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // width: 100%;
+    height: 85vh;
+}
+
+.footer {
+    margin: 1rem;
+}
+
 .navbar {
     background-color: $black;
+    padding: 1rem 1rem 0 1rem;
+    color: $light-grey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        padding-bottom: 1rem;
+
+        .nav-item {
+            // padding: 1rem;
+        }
+    }
 } 
+
+.list-group-item {
+    margin: 1rem;
+}
+
+.img {
+    max-width: 10%;
+    .room {
+
+    }
+
+    .treatment {
+
+    }
+}
+
+
+
+.btn {
+    // background-color: #4CAF50; /* Green */
+    padding: 1rem;
+    transition-duration: 0.4s;
+    cursor: pointer; 
+    &:hover {
+        background-color: $dark-olive-green; 
+
+    }
+}
+      
