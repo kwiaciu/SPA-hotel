@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 export const home = () => {
     const fragment = $(new DocumentFragment());
-    const section = $(`<section class="home" style="background-image: url('../dist/main01.jpg')"></section>`);
+    const section = $(`<section id="home" style="background-image: url('../dist/main01.jpg')"></section>`);
     fragment.append(section);
     section
         .append('<h2 class="front-page-header">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quasi repellendus possimus fugit </h2>')
