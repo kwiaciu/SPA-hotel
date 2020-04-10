@@ -2,7 +2,7 @@
   "users": [],
   "rooms": [
     {
-      "id": 1,
+      "id": "01",
       "name": "Pokój unarny",
       "beds": 1,
       "guests": 1,
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "02",
       "name": "Pokój unarny",
       "beds": 1,
       "guests": 1,
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "03",
       "name": "Pokój binarny",
       "beds": 1,
       "guests": 2,
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "04",
       "name": "Pokój binarny",
       "beds": 1,
       "guests": 2,
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "05",
       "name": "Pokój trójkowy",
       "beds": 2,
       "guests": 3,
@@ -102,7 +102,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "06",
       "name": "Pokój trójkowy",
       "beds": 2,
       "guests": 3,
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "07",
       "name": "Pokój czwórkowy",
       "beds": 4,
       "guests": 4,
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "08",
       "name": "Pokój czwórkowy",
       "beds": 4,
       "guests": 4,
@@ -164,7 +164,7 @@
   ],
   "treatments": [
     {
-      "id": 1,
+      "id": "61",
       "name": "Masaż rozgrzanym monitorem",
       "area": "back",
       "time": 30,
@@ -172,7 +172,7 @@
       "imgsrc": "../dist/spa01.jpg"
     },
     {
-      "id": 2,
+      "id": "62",
       "name": "Biczowanie kablem od myszy",
       "area": "back",
       "time": 20,
@@ -181,7 +181,7 @@
 
     },
     {
-      "id": 3,
+      "id": "63",
       "name": "Peeling odłamkami płyty CD",
       "area": "face",
       "time": 15,
@@ -189,7 +189,7 @@
       "imgsrc": "../dist/spa03.jpg"
     },
     {
-      "id": 4,
+      "id": "64",
       "name": "Pedicure woskiem z USB",
       "area": "legs",
       "time": 25,
@@ -198,7 +198,7 @@
 
     },
     {
-      "id": 5,
+      "id": "65",
       "name": "Manicure analogowo-cyfrowy",
       "area": "hands",
       "time": 45,
@@ -206,7 +206,7 @@
       "imgsrc": "../dist/spa05.jpg"
     },
     {
-      "id": 6,
+      "id": "66",
       "name": "Kąpiel w gorącej kawie",
       "area": "body",
       "time": 60,
@@ -215,7 +215,7 @@
 
     },
     {
-      "id": 7,
+      "id": "67",
       "name": "Depilacja dyskiem twardym",
       "area": "body",
       "time": 45,
