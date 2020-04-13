@@ -2,8 +2,9 @@
   "users": [],
   "rooms": [
     {
-      "id": "01",
+      "id": "101",
       "name": "Pokój unarny",
+      "desc": "lorem ipsum ",
       "beds": 1,
       "guests": 1,
       "price": 170,
@@ -22,8 +23,9 @@
       ]
     },
     {
-      "id": "02",
+      "id": "102",
       "name": "Pokój unarny",
+      "desc": "lorem ipsum ",
       "beds": 1,
       "guests": 1,
       "price": 170,
@@ -42,8 +44,9 @@
       ]
     },
     {
-      "id": "03",
+      "id": "103",
       "name": "Pokój binarny",
+      "desc": "lorem ipsum ",
       "beds": 1,
       "guests": 2,
       "price": 240,
@@ -62,8 +65,9 @@
       ]
     },
     {
-      "id": "04",
+      "id": "104",
       "name": "Pokój binarny",
+      "desc": "lorem ipsum ",
       "beds": 1,
       "guests": 2,
       "price": 240,
@@ -82,8 +86,9 @@
       ]
     },
     {
-      "id": "05",
+      "id": "105",
       "name": "Pokój trójkowy",
+      "desc": "lorem ipsum ",
       "beds": 2,
       "guests": 3,
       "price": 290,
@@ -102,8 +107,9 @@
       ]
     },
     {
-      "id": "06",
+      "id": "106",
       "name": "Pokój trójkowy",
+      "desc": "lorem ipsum ",
       "beds": 2,
       "guests": 3,
       "price": 290,
@@ -122,8 +128,9 @@
       ]
     },
     {
-      "id": "07",
+      "id": "107",
       "name": "Pokój czwórkowy",
+      "desc": "lorem ipsum ",
       "beds": 4,
       "guests": 4,
       "price": 340,
@@ -142,8 +149,9 @@
       ]
     },
     {
-      "id": "08",
+      "id": "108",
       "name": "Pokój czwórkowy",
+      "desc": "lorem ipsum ",
       "beds": 4,
       "guests": 4,
       "price": 340,
@@ -164,16 +172,18 @@
   ],
   "treatments": [
     {
-      "id": "61",
+      "id": "501",
       "name": "Masaż rozgrzanym monitorem",
+      "desc": "lorem ipsum ",
       "area": "back",
       "time": 30,
       "price": 80,
       "imgsrc": "../dist/spa01.jpg"
     },
     {
-      "id": "62",
+      "id": "502",
       "name": "Biczowanie kablem od myszy",
+      "desc": "lorem ipsum ",
       "area": "back",
       "time": 20,
       "price": 70,
@@ -181,16 +191,18 @@
 
     },
     {
-      "id": "63",
+      "id": "503",
       "name": "Peeling odłamkami płyty CD",
+      "desc": "lorem ipsum ",
       "area": "face",
       "time": 15,
       "price": 50,
       "imgsrc": "../dist/spa03.jpg"
     },
     {
-      "id": "64",
+      "id": "504",
       "name": "Pedicure woskiem z USB",
+      "desc": "lorem ipsum ",
       "area": "legs",
       "time": 25,
       "price": 100,
@@ -198,16 +210,18 @@
 
     },
     {
-      "id": "65",
+      "id": "505",
       "name": "Manicure analogowo-cyfrowy",
+      "desc": "lorem ipsum ",
       "area": "hands",
       "time": 45,
       "price": 150,
       "imgsrc": "../dist/spa05.jpg"
     },
     {
-      "id": "66",
+      "id": "506",
       "name": "Kąpiel w gorącej kawie",
+      "desc": "lorem ipsum ",
       "area": "body",
       "time": 60,
       "price": 200,
@@ -215,8 +229,9 @@
 
     },
     {
-      "id": "67",
+      "id": "507",
       "name": "Depilacja dyskiem twardym",
+      "desc": "lorem ipsum ",
       "area": "body",
       "time": 45,
       "price": 120,

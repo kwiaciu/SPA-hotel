@@ -1,14 +1,15 @@
 import $ from 'jquery';
 
 export const treatmentsListItem = (treatment) => {
-    const li = $('<li></li>');
-    
-    const ul = $('<ul class="list-group-item"></ul>');
-    ul.append(`<li><img class="img treatment" src="${treatment.imgsrc}" alt="Photo of treatment"></li>`)
-    ul.append(`<li>${treatment.name}</li>`);
-    ul.append(`<li>Price: ${treatment.price}</li>`)
-    ul.append(`<li>Duration: ${treatment.time}</li>`)
-    ul.append(`<li>Area: ${treatment.area}</li>`)
-    li.append(ul);
+
+    const li = $('<li class="list-group-item"></li>');
+    li
+        .append(`<img class="img treatment" src="${treatment.imgsrc}" alt="Photo of treatment"></img>`)
+        .append(`<h3 class="treatment-header">${treatment.name}</h3>`)
+        .append(`<p>${treatment.desc}</p>`)
+        .append(`<p>Area: ${treatment.area}</p>`)
+        .append(`<p>Duration: ${treatment.time}</p>`)
+        .append(`<p>Price: ${treatment.price}</p>`)
+        .append(`<button id="${treatment.id}"class="cart-add">Add</button>`);
     return li;
 };
