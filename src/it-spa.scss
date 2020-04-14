@@ -86,67 +86,64 @@ section {
 }
 
 #section-rooms {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  align-items: center;
+
+  figure {
+    max-width: 60%;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
+    img {
+      width: 100%;
+    }
+  }
 
-    figure {
-      max-width: 60%;
+  .home-rooms {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
 
-      img {
-        width: 100%;
-      }
-
+      align-items: center;
     }
-
-    .home-rooms {
-      max-width: 40%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-      }
-    }
+  }
 }
 
 #section-spa {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  figure {
+    width: 50%;
     display: flex;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column;
+    justify-content: center;
 
-    figure {
-      width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .home-spa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-
-      img {
-        width: 100%;
-      }
-
+      align-items: center;
     }
-
-    .home-spa {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+  }
 }
 
 .footer {
@@ -154,18 +151,22 @@ section {
 }
 
 #cart {
-  background-color: $dark-olive-green;;
+  background-color: $dark-olive-green;
   position: fixed;
   z-index: 100;
   top: 10%;
   right: 0px;
-  width: 30%;
+  max-width: 30%;
+
+  #cart-container {
+    display: none;
+  }
+
   .list-group {
     max-height: 80vh;
     overflow: auto;
   }
 }
-
 
 .navbar {
   background-color: $black;
@@ -193,7 +194,6 @@ section {
     max-width: 20%;
   }
 }
-
 
 .btn {
   // background-color: #4CAF50; /* Green */

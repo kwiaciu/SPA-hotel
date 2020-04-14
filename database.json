@@ -1,5 +1,16 @@
 {
-  "users": [],
+  "users": [
+    {
+      "login": "admin",
+      "password": "admin123",
+      "previousOrders": []
+    },
+    {
+      "login": "konzwalony",
+      "password": "niemuszewalczyc",
+      "previousOrders": []
+    }
+  ],
   "rooms": [
     {
       "id": "101",
@@ -188,7 +199,6 @@
       "time": 20,
       "price": 70,
       "imgsrc": "../dist/spa02.jpg"
-
     },
     {
       "id": "503",
@@ -207,7 +217,6 @@
       "time": 25,
       "price": 100,
       "imgsrc": "../dist/spa04.jpg"
-
     },
     {
       "id": "505",
@@ -226,7 +235,6 @@
       "time": 60,
       "price": 200,
       "imgsrc": "../dist/spa06.jpg"
-
     },
     {
       "id": "507",
@@ -236,7 +244,6 @@
       "time": 45,
       "price": 120,
       "imgsrc": "../dist/spa07.jpg"
-
     }
   ]
 }

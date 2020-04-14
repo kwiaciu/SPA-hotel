@@ -5,6 +5,7 @@ import {
     booking,
     contact
 } from '../views';
+import { loginView } from '../login/loginView';
 
 export const routes = [
 
@@ -13,5 +14,6 @@ export const routes = [
     { name: 'Treatments', path: '/treatments', data: {}, component: treatments },
     { name: 'Booking', path: '/booking', data: {}, component: booking },
     { name: 'Contact', path: '/contact', data: {}, component: contact },
+    { name: 'Login', path: '/login', data: {}, component: loginView },
 
 ];
