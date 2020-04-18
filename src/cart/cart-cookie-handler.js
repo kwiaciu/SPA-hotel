@@ -7,7 +7,7 @@ export class Cart {
     }
 
     cookie() {
-        const cookies = document.cookie.split(';');
+        const cookies = document.cookie.split('; ');
         const itSpaCookie = cookies.find(cookie => cookie.startsWith(this.key));
 
         return itSpaCookie;

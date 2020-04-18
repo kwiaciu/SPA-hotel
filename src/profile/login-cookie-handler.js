@@ -7,9 +7,8 @@ export class Login {
 
 
     cookie() {
-        const cookies = document.cookie.split(';');
+        const cookies = document.cookie.split('; ');
         const itSpaCookie = cookies.find(cookie => cookie.startsWith(this.key));
-
         return itSpaCookie;
     }
 
@@ -35,6 +34,7 @@ export class Login {
     setValue(value) {
         const stringifiedValue = JSON.stringify(value);
         document.cookie = `${this.key}=${stringifiedValue}`;
+        console.log(`${this.key}=${stringifiedValue}`)
     }
 
     empty() {

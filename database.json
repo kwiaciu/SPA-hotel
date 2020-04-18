@@ -1,12 +1,12 @@
 {
   "users": [
     {
-      "login": "admin",
+      "id": "admin",
       "password": "admin123",
       "previousOrders": []
     },
     {
-      "login": "konzwalony",
+      "id": "konzwalony",
       "password": "niemuszewalczyc",
       "previousOrders": []
     }

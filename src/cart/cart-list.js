@@ -1,7 +1,7 @@
 import $ from 'jquery';
-import { databaseAccess } from '../common/databaseAccess';
+import { databaseAccess } from '../common/database-access';
 import { cartListItem } from './cart-list-item';
-import { Cart } from './cart';
+import { Cart } from './cart-cookie-handler';
 
 
 export const cartList = () => {
@@ -16,14 +16,14 @@ export const cartList = () => {
             .map((cartCookieElement) => {
                 if (cartCookieElement.id.charAt(0) === "1") {
                     databaseAccess.getRoom(cartCookieElement.id)
-                    .then(room => cartList
-                        .append(cartListItem(room, cartCookieElement.quantity)
-                        ))
-                } else if (cartCookieElement.id.charAt(0) === "5"){
+                        .then(room => cartList
+                            .append(cartListItem(room, cartCookieElement.quantity)
+                            ))
+                } else if (cartCookieElement.id.charAt(0) === "5") {
                     databaseAccess.getTreatment(cartCookieElement.id)
-                    .then(treatment => cartList
-                        .append(cartListItem(treatment, cartCookieElement.quantity)
-                        ))
+                        .then(treatment => cartList
+                            .append(cartListItem(treatment, cartCookieElement.quantity)
+                            ))
                 } else {
                     console.log('error')
                 }
@@ -36,7 +36,7 @@ export const cartList = () => {
     // button id and database element id are the same
     $(cartList).on('click', 'button', function () {
         const buttonId = $(this).attr('id');
-        cart.removeFromCart({"id":buttonId});
+        cart.removeFromCart({ "id": buttonId });
 
     });
 

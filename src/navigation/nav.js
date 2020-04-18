@@ -20,6 +20,14 @@ export const nav = () => {
         const newNavItem = navItem(route.name, () => navbar.trigger(routeChange, { path: route.path }))
         navbar.find('ul').append(newNavItem);
     })
+    
+    navbar
+        .append(`
+        <div class="side-bar">
+        <button id="show-profile"><i class="icon">Profile</i></button>
+        </div>`)
+    
+
     // console.log(navItems);
 
 

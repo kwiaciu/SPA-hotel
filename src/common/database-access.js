@@ -13,6 +13,14 @@ export const databaseAccess = {
   },
   getTreatment(id) {
     // pobiera jeden pokoj o zadanym id
-    return fetch(`http://localhost:3000/treatments/${id}`).then(response => response.json());
+    return fetch(`http://localhost:3000/treatments/${id}`).then(response => response.json())
+  },
+
+  getUser(id) {
+    return fetch(`http://localhost:3000/users/${id}`).then(response => response.json().then(data => ({
+      data: data,
+      status: response.status
+    })))
   }
+
 };

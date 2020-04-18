@@ -2,10 +2,10 @@ import $ from 'jquery';
 
 // import { routeChange } from '../../router/route-change';
 // import { routes } from '../../router/routes';
-import { sectionLanding } from './sectionLanding';
-import { sectionBreak } from './sectionBreak';
-import { sectionRooms } from './sectionRooms';
-import { sectionSpa } from './sectionSpa';
+import { sectionLanding } from './section-landing';
+import { sectionBreak } from './section-break';
+import { sectionRooms } from './section-rooms';
+import { sectionSpa } from './section-spa';
 
 
 export const home = () => {

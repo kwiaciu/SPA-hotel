@@ -1,7 +1,7 @@
 import $ from 'jquery';
-import { databaseAccess } from '../common/databaseAccess';
+import { databaseAccess } from '../common/database-access';
 import { treatmentsListItem } from './treatments-list-item';
-import { Cart } from '../cart/cart';
+import { Cart } from '../cart/cart-cookie-handler';
 
 
 export const treatmentsList = () => {
