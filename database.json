@@ -1,8 +1,13 @@
 {
   "users": [
     {
-      "id": "admin",
+      "id": "admin@admin.com",
       "password": "admin123",
+      "mail": "admin@admin.com",
+      "city": "some city",
+      "street": "some street",
+      "code": "12-345",
+      "phone": "987654321",
       "previousOrders": []
     },
     {

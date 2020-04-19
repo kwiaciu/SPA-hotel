@@ -8,7 +8,7 @@ export const roomsListItem = (room) => {
     li.append(`<p>Number of beds: ${room.beds}</p>`)
     li.append(`<p>Number of guests: ${room.guests}</p>`)
     li.append(`<p>Price: ${room.price}</p>`)
-    li.append(`<button id="${room.id}"class="cart-add">Add</button>`)
+    li.append(`<button id="${room.id}" class="btn cart-add">Add</button>`)
 
     return li;
 };

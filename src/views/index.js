@@ -4,3 +4,4 @@ export * from './rooms';
 export * from './treatments';
 export * from './contact';
 export * from './oops';
+export * from '../profile/profile';

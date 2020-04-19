@@ -1,4 +1,5 @@
-// import $ from 'jquery';
+
+// perhaps it would be better to make class cookies and then subclass login and cart, since they share most of the methods
 
 export class Login {
     constructor() {
@@ -30,7 +31,7 @@ export class Login {
     }
 
 
-    // INPUT VALUE IS ARRAY OF OBJECTS
+    // INPUT VALUE IS OBJECT
     setValue(value) {
         const stringifiedValue = JSON.stringify(value);
         document.cookie = `${this.key}=${stringifiedValue}`;

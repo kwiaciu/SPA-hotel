@@ -8,7 +8,7 @@ export class Router {
 
     constructor() {
         this.body = $(document.body);
-        this.out = $('main');
+        this.outlet = $('main');
         this.routes = routes;
     }
 

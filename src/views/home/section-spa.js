@@ -8,7 +8,7 @@ export const sectionSpa = () => {
 
     const sectionSpa = $('<section id="section-spa"></section>');
     const spaDiv = $('<div class="home-spa"></div>');
-    const treatmentsButton = $('<a class="big-btn"></a>').text(routeTreatments.name).on('click', () => spaDiv.trigger(routeChange, { path: routeTreatments.path }));
+    const treatmentsButton = $('<button class="big-btn"></button>').text(routeTreatments.name).on('click', () => spaDiv.trigger(routeChange, { path: routeTreatments.path }));
     const buttonWrapper = $('<div class="wrapper"></div>')
     buttonWrapper.append(treatmentsButton);
     spaDiv

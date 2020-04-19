@@ -10,6 +10,6 @@ export const treatmentsListItem = (treatment) => {
         .append(`<p>Area: ${treatment.area}</p>`)
         .append(`<p>Duration: ${treatment.time}</p>`)
         .append(`<p>Price: ${treatment.price}</p>`)
-        .append(`<button id="${treatment.id}"class="cart-add">Add</button>`);
+        .append(`<button id="${treatment.id}" class="btn cart-add">Add</button>`);
     return li;
 };

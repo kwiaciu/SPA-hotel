@@ -19,7 +19,7 @@ export const itSpaCart = () => {
 
     const cartComponent = $(`
     <aside id="cart">
-    <button id="show-cart"><i class="icon">Cart</i></button>
+    <button id="show-cart" class="btn"><i class="icon">Cart</i></button>
     </aside>
     `)
 

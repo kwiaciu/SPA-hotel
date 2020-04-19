@@ -1,22 +1,24 @@
 import $ from 'jquery';
-import { loginPage } from './login-page';
 import { Login } from './login-cookie-handler';
-
+import { login } from './login';
+import { profilePage } from './profile-page';
 export const profile = () => {
-    const login = new Login();
-    const loggedIn = login.exists() && login.isNotEmpty();
-    const profile = $(` <aside id="login">
-                        
-                        </aside>`);
+    const cookie = new Login();
+    const loggedIn = cookie.exists() && cookie.isNotEmpty();
+    const user = cookie.getValue().login;
+    const profile = $(new DocumentFragment());
 
     if (loggedIn) {
         console.log('logged in');
-        // userProfile()
+        console.log(user);
+        $('main').empty();
+        profile.append(profilePage(user))
+
         // load user name from cookies
         // fetch data from database to display user data
     } else {
         console.log('not logged in');
-        profile.append(loginPage());
-        return profile
+        profile.append(login());
     }
+    return profile
 }

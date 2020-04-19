@@ -21,11 +21,12 @@ export const nav = () => {
         navbar.find('ul').append(newNavItem);
     })
     
-    navbar
-        .append(`
-        <div class="side-bar">
-        <button id="show-profile"><i class="icon">Profile</i></button>
-        </div>`)
+    // navbar
+        // .append(`
+        // <div class="side-bar">
+        // <button id="show-profile"><i class="icon">Profile</i></button>
+        // <button id="logout"><i class="icon">Logout</i></button>
+        // </div>`)
     
 
     // console.log(navItems);

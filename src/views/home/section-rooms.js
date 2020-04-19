@@ -8,7 +8,7 @@ export const sectionRooms = () => {
 
     const sectionRooms = $('<section id="section-rooms"></section>');
     const roomsDiv = $('<div class="home-rooms"></div>');
-    const roomsButton = $('<a class="big-btn"></a>').text(routeRooms.name).on('click', () => roomsDiv.trigger(routeChange, { path: routeRooms.path }));
+    const roomsButton = $('<button class="big-btn"></a>').text(routeRooms.name).on('click', () => roomsDiv.trigger(routeChange, { path: routeRooms.path }));
     const buttonWrapper = $('<div class="wrapper"></div>')
     buttonWrapper.append(roomsButton);
     sectionRooms
