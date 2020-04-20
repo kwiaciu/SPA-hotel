@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { Login } from './login-cookie-handler';
+import { profileSidebarHandler } from './profile-sidebar-handler';
 
 
 export const profileSidebar = () => {
@@ -16,6 +17,6 @@ export const profileSidebar = () => {
         profileSidebar
         .append('<button id="show-profile" class="btn"><i class="icon">Profile</i></button>');
     }
-
+    profileSidebarHandler();
     return profileSidebar
 }

@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { navItem } from './nav-item';
 import { routeChange } from '../router/route-change';
 import { routes } from '../router/routes'
+import { navHandler } from './nav-handler';
  
 export const nav = () => {
     const navbar = $(`
@@ -21,16 +22,8 @@ export const nav = () => {
         navbar.find('ul').append(newNavItem);
     })
     
-    // navbar
-        // .append(`
-        // <div class="side-bar">
-        // <button id="show-profile"><i class="icon">Profile</i></button>
-        // <button id="logout"><i class="icon">Logout</i></button>
-        // </div>`)
-    
-
-    // console.log(navItems);
-
+ 
+    navHandler();
 
     return navbar;
 };

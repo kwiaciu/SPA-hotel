@@ -21,6 +21,26 @@ export const databaseAccess = {
       data: data,
       status: response.status
     })))
-  }
+  },
 
+  postUser(data) {
+    return fetch(`http://localhost:3000/users/`, {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log('Success:', data);
+        return ('Account successfully created ');
+      })
+      .catch((error) => {
+        // console.error('Error:', error);
+        console.error('Error:', error);
+        return ('Error:', error);
+      });
+
+  }
 };

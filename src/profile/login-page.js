@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import { loginPageHandler } from './login-page-handler';
+import { loginFormHandler } from './login-form-handler';
 
 export const loginPage = () => {
     const loginPage = $('<div id="login-page"></div>');
@@ -10,10 +12,10 @@ export const loginPage = () => {
         .append('<input type="password" id="password-input">')
         .append('<input type="submit"></input>');
 
-    
     loginPage.append(loginForm);
     loginPage.append('<p class="register">Or click <a id="link-register" href="javascript:;">here</a> to register new account</p>');
-
+    loginFormHandler();
+    loginPageHandler();
 
     return loginPage
 }

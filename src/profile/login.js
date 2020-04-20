@@ -7,8 +7,6 @@ export const login = () => {
     const login = $(`<aside id="login"></aside>`);
 
     login.append(loginPage());
-    loginFormHandler();
-    loginPageHandler();
 
     return login
 }

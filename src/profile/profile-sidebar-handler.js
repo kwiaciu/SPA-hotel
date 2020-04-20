@@ -4,9 +4,7 @@ import { profile } from './profile';
 
 
 export const profileSidebarHandler = () => {
-    // const login = new Login();
-    // const loggedIn = login.exists() && login.isNotEmpty();
-    // if (loggedIn) {
+
     $('body').on('click', '#show-profile', () => {
         $('main').append(profile())
         console.log('sidebar works')

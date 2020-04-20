@@ -14,6 +14,56 @@
       "id": "konzwalony",
       "password": "niemuszewalczyc",
       "previousOrders": []
+    },
+    {
+      "id": "bkwiagd@gsadg",
+      "password": "123",
+      "mail": "bkwiagd@gsadg",
+      "city": "asd",
+      "street": "asdf",
+      "code": "asdfg",
+      "phone": "123456789",
+      "previousOrders": []
+    },
+    {
+      "id": "asds@asfa",
+      "password": "123",
+      "mail": "asds@asfa",
+      "city": "ertyu",
+      "street": "fghj",
+      "code": "tyuio",
+      "phone": "123456789",
+      "previousOrders": []
+    },
+    {
+      "id": "123@124",
+      "password": "123",
+      "mail": "123@124",
+      "city": "sdfhj",
+      "street": "asdf",
+      "code": "sdg",
+      "phone": "123456789",
+      "previousOrders": []
+    },
+    {
+      "id": "124@fdsddfs",
+      "password": "123",
+      "mail": "124@fdsddfs",
+      "city": "asderty",
+      "street": "ghj",
+      "code": "bnm",
+      "phone": "123456789",
+      "previousOrders": []
+    },
+    {
+      "id": "asfsfasfdsaf@adsf",
+      "password": "asdf",
+      "mail": "asfsfasfdsaf@adsf",
+      "city": "fghjk",
+      "street": "hjkl",
+      "code": "hjkl",
+      "phone": "123456789",
+      "previousOrders": []
     }
   ],
   "rooms": [

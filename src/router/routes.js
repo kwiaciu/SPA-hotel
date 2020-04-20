@@ -1,10 +1,10 @@
 import {
     home,
-    rooms,
     treatments,
     booking,
     contact
 } from '../views';
+import { rooms } from '../rooms/rooms'
 import { profile } from '../profile/profile';
 
 export const routes = [

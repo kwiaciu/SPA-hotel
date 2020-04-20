@@ -2,7 +2,7 @@ import { databaseAccess } from '../common/database-access';
 import { Login } from './login-cookie-handler';
 
 export const checkPassword = (login,pass) => {
-
+    //TODO: change console.logs to dom elements to show to user
     if (typeof(login)==='string' && typeof(pass)==='string' && login.length > 3 && pass.length > 3 ){
         databaseAccess.getUser(login).then( response => {
             console.log(response);
@@ -15,9 +15,6 @@ export const checkPassword = (login,pass) => {
                 const cookie = new Login();
                 console.log('logging in')
                 cookie.setValue({"login": login});
-                console.log(cookie.cookie());
-                console.log(JSON.stringify(login));
-
                 // console.log(cookie.getValue());
                 // add info to cookies that user is now logged
                 // redirect to 'profile' again which now will be displaying user data
