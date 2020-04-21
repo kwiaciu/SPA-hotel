@@ -11,11 +11,6 @@
       "previousOrders": []
     },
     {
-      "id": "konzwalony",
-      "password": "niemuszewalczyc",
-      "previousOrders": []
-    },
-    {
       "id": "bkwiagd@gsadg",
       "password": "123",
       "mail": "bkwiagd@gsadg",
@@ -75,18 +70,7 @@
       "guests": 1,
       "price": 170,
       "imgsrc": "../dist/hotel01.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": ["2020-05-01","2020-05-02","2020-05-05","2020-05-06"]
     },
     {
       "id": "102",
@@ -96,18 +80,7 @@
       "guests": 1,
       "price": 170,
       "imgsrc": "../dist/hotel02.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": []
     },
     {
       "id": "103",
@@ -117,18 +90,7 @@
       "guests": 2,
       "price": 240,
       "imgsrc": "../dist/hotel03.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": []
     },
     {
       "id": "104",
@@ -138,18 +100,7 @@
       "guests": 2,
       "price": 240,
       "imgsrc": "../dist/hotel04.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": []
     },
     {
       "id": "105",
@@ -159,18 +110,7 @@
       "guests": 3,
       "price": 290,
       "imgsrc": "../dist/hotel05.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": []
     },
     {
       "id": "106",
@@ -180,18 +120,7 @@
       "guests": 3,
       "price": 290,
       "imgsrc": "../dist/hotel06.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": []
     },
     {
       "id": "107",
@@ -201,18 +130,7 @@
       "guests": 4,
       "price": 340,
       "imgsrc": "../dist/hotel07.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": []
     },
     {
       "id": "108",
@@ -222,18 +140,7 @@
       "guests": 4,
       "price": 340,
       "imgsrc": "../dist/hotel08.jpg",
-      "occupied": [
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        },
-        {
-          "occupiedFrom": "",
-          "occupiedTo": "",
-          "reservationNumber": ""
-        }
-      ]
+      "occupied": []
     }
   ],
   "treatments": [

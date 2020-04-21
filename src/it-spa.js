@@ -5,8 +5,6 @@ import { nav } from './navigation/nav';
 import { itSpaCart } from './cart/it-spa-cart';
 import { cartHandlers } from './cart/cart-handlers';
 import { profileSidebar } from './profile/profile-sidebar';
-import { profileSidebarHandler } from './profile/profile-sidebar-handler';
-import { navHandler } from './navigation/nav-handler';
 
 const main = $('main');
 
