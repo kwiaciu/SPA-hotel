@@ -6,7 +6,7 @@ import { Cart } from '../cart/cart-cookie-handler';
 export const roomsList = () => {
   const cart = new Cart();
 
-  const ul = $('<ul class="list-group"></ul>');
+  const ul = $('<ul id="rooms-list" class="list-group"></ul>');
   // doczepia liste pokoi, gdy tylko przyjdzie z serwera
   databaseAccess.getRooms()
     .then(rooms => rooms.map(room => roomsListItem(room)))
@@ -14,7 +14,7 @@ export const roomsList = () => {
 
   // add button handler
   $(ul).on('click', 'button', function () {
-    const buttonId = $(this).attr('id');
+    const buttonId = $(this).attr('id').slice(0,3);
     cart.addToCart({ "id": buttonId });
   });
 

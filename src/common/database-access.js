@@ -41,6 +41,21 @@ export const databaseAccess = {
         console.error('Error:', error);
         return ('Error:', error);
       });
+  },
+
+  checkRooms(dates) {
+    return fetch(`http://localhost:3000/rooms/`).then(response => response.json()).then(rooms => {
+      const roomsOccupiedAtDates = [];
+      rooms.forEach(room => {
+        const found = room.occupied.some(date => dates.includes(date))
+        if (found) {
+          roomsOccupiedAtDates.push(room.id)
+        }
+        
+      });
+      return roomsOccupiedAtDates
+    })
+
 
   }
 };

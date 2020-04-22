@@ -256,10 +256,17 @@ section {
 
 }
 
+.list-group {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .list-group-item {
   margin: 1rem;
-
+  display: flex;
+  flex-direction: column;
   img {
     max-width: 20%;
   }
@@ -268,12 +275,22 @@ section {
 .btn {
   color: $light-grey;
   font: inherit;
-  background-color: $black-transparent; /* Green */
+  background-color: $black;
+
   padding: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
   &:hover {
     background-color: $dark-olive-green;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $black-transparent; /* Green */
+
+    // &:hover {
+      // background-color: initial;
+    // }
   }
 }
 

@@ -15,7 +15,7 @@ export const treatmentsList = () => {
 
   // add button handler
   $(ul).on('click', 'button', function () {
-    const buttonId = $(this).attr('id');
+    const buttonId = $(this).attr('id').slice(0,3);
     cart.addToCart({ "id": buttonId });
   });
 

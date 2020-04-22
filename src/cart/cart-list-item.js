@@ -9,7 +9,7 @@ export const cartListItem= (item, quantity) => {
     .append(`<img class="img" src="${item.imgsrc}" alt="Photo of cart item">`)
     .append(`<h3 class="cart-header">${item.name}</h3>`)
     .append(`<p class="cart-item">Price: ${item.price}</p>`)
-    .append(`<button id="${item.id}" class="delete">Delete</button>`)
+    .append(`<button id="${item.id}-delete" class="delete">Delete</button>`)
 
     
     return listItem

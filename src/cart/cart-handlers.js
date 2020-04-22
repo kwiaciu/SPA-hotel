@@ -11,4 +11,5 @@ export const cartHandlers = () => {
     $('#cart').detach();
     $('main').before(itSpaCart());
   });
+
 }
