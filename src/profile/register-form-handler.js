@@ -2,15 +2,15 @@ import $ from 'jquery';
 import { checkRegisterForm } from './check-register-form';
 
 
-export const registerFormHandler = () => {
-    $('main').on("change", "#register-form", function (event) {
+export const registerFormHandler = (container) => {
+    $(container).on("change", "#register-form", function (event) {
         //TODO 
         // 1. Password strength
         // 2. Confirming password while writing
         // 3. 
     });
 
-    $('main').on("submit", "#register-form", function (event) {
+    $(container).on("submit", "#register-form", function (event) {
         event.preventDefault();
         const mail = $('#mail-input').val();
         const password = $('#password-input').val();
@@ -34,7 +34,8 @@ export const registerFormHandler = () => {
                 "previousOrders": []
             };
             checkRegisterForm(data)
-            console.log('sumbit')
+            
+            console.log('submit')
         }
     });
 }

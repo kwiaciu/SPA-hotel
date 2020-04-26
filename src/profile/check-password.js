@@ -15,6 +15,8 @@ export const checkPassword = (login,pass) => {
                 const cookie = new Login();
                 console.log('logging in')
                 cookie.setValue({"login": login});
+                location.reload();
+
                 // console.log(cookie.getValue());
                 // add info to cookies that user is now logged
                 // redirect to 'profile' again which now will be displaying user data

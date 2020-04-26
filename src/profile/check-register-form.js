@@ -5,7 +5,8 @@ export const checkRegisterForm = (data) => {
     databaseAccess.getUser(data.id).then(response => {
         if (response.status == '404') {
             databaseAccess.postUser(data).then(response => alert(response))
-            //todo if success ask whether to login
+            location.reload();
+
         }
     })
 

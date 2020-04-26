@@ -3,7 +3,7 @@ import { databaseAccess } from '../common/database-access';
 
 
 export const profilePageData = (user) => {
-    const profilePageData = $('<section id="profile-page-data"></section>');
+    const profilePageData = $('<section id="profile-data"></section>');
     const data = $('<ul id="data"></ul>')
 
     const array = ['mail', 'phone', 'city', 'street', 'code'];
@@ -15,7 +15,7 @@ export const profilePageData = (user) => {
     
     profilePageData
     .append(data)
-    .append('<a id="edit" class="btn"><i>Edit</i></a>')
-    .append('<a id="save" class="btn hidden"><i>Save</i></a>')
+    .append('<button id="edit" class="btn" disabled><i>Edit</i></button>')
+    .append('<button id="save" class="btn hidden"><i>Save</i></button>')
     return profilePageData
 }

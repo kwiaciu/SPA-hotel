@@ -25,9 +25,8 @@ export const cartList = () => {
                             .append(cartListItem(treatment, cartCookieElement.quantity)
                             ))
                 } else {
-                    console.log('error')
+                    console.warn('error')
                 }
-
             })
     } else {
         cartList.append($('<li>Your basket is empty</li>'))
@@ -35,7 +34,7 @@ export const cartList = () => {
 
     // button id and database element id are the same
     $(cartList).on('click', 'button', function () {
-        const buttonId = $(this).attr('id').slice(0,3);
+        const buttonId = $(this).attr('id').slice(0, 3);
         cart.removeFromCart({ "id": buttonId });
 
     });

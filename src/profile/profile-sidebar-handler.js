@@ -13,7 +13,6 @@ export const profileSidebarHandler = () => {
     $('body').on('click', '#logout', () => {
         const login = new Login();
         login.empty();
+        location.reload();
     });
-
-
 }

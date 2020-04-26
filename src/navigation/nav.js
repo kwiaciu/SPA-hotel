@@ -2,8 +2,7 @@ import $ from 'jquery';
 import { navItem } from './nav-item';
 import { routeChange } from '../router/route-change';
 import { routes } from '../router/routes'
-import { navHandler } from './nav-handler';
- 
+
 export const nav = () => {
     const navbar = $(`
     <nav class="navbar">
@@ -16,14 +15,10 @@ export const nav = () => {
     // const bookingNavItem = navItem("Booking",() => navbar.trigger(routeChange, { path: '/booking' }));
     // navbar.find('ul').append(bookingNavItem);
 
-
-    const navItems = routes.map((route) => {
+    routes.map((route) => {
         const newNavItem = navItem(route.name, () => navbar.trigger(routeChange, { path: route.path }))
         navbar.find('ul').append(newNavItem);
     })
-    
- 
-    navHandler();
 
     return navbar;
 };

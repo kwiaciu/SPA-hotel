@@ -8,6 +8,7 @@ export const loginPageHandler = () => {
         $('#login').remove();
         $('main').off("click", "#login");
         $('main').off("submit", "#login-form");
+        $('main').off("click", "#link-register")
       }
     } 
   })

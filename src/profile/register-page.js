@@ -1,6 +1,5 @@
 import $ from 'jquery';
-import { registerFormHandler } from './registerFormHandler';
-import { registerPageHandler } from './registerPageHandler';
+import { registerFormHandler } from './register-form-handler';
 
 export const registerPage = () => {
     const registerPage = $('<div id="register-page"></div>');
@@ -14,7 +13,6 @@ export const registerPage = () => {
     registerForm
         .append('<input type="submit"></input>');
     registerPage.append(registerForm);
-    registerPageHandler();
-    registerFormHandler();
+    registerFormHandler(registerPage);
     return registerPage
 }

@@ -17,7 +17,6 @@ export class Login {
         return this.cookie() !== undefined;
     }
 
-
     getValue() {
         if (this.exists()) {
             const itSpaCookie = this.cookie();
@@ -29,7 +28,6 @@ export class Login {
             this.setValue([]);
         }
     }
-
 
     // INPUT VALUE IS OBJECT
     setValue(value) {

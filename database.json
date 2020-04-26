@@ -11,16 +11,6 @@
       "previousOrders": []
     },
     {
-      "id": "bkwiagd@gsadg",
-      "password": "123",
-      "mail": "bkwiagd@gsadg",
-      "city": "asd",
-      "street": "asdf",
-      "code": "asdfg",
-      "phone": "123456789",
-      "previousOrders": []
-    },
-    {
       "id": "asds@asfa",
       "password": "123",
       "mail": "asds@asfa",
@@ -29,37 +19,8 @@
       "code": "tyuio",
       "phone": "123456789",
       "previousOrders": []
-    },
-    {
-      "id": "123@124",
-      "password": "123",
-      "mail": "123@124",
-      "city": "sdfhj",
-      "street": "asdf",
-      "code": "sdg",
-      "phone": "123456789",
-      "previousOrders": []
-    },
-    {
-      "id": "124@fdsddfs",
-      "password": "123",
-      "mail": "124@fdsddfs",
-      "city": "asderty",
-      "street": "ghj",
-      "code": "bnm",
-      "phone": "123456789",
-      "previousOrders": []
-    },
-    {
-      "id": "asfsfasfdsaf@adsf",
-      "password": "asdf",
-      "mail": "asfsfasfdsaf@adsf",
-      "city": "fghjk",
-      "street": "hjkl",
-      "code": "hjkl",
-      "phone": "123456789",
-      "previousOrders": []
     }
+
   ],
   "rooms": [
     {
@@ -70,7 +31,12 @@
       "guests": 1,
       "price": 170,
       "imgsrc": "../dist/hotel01.jpg",
-      "occupied": ["2020-05-01","2020-05-02","2020-05-05","2020-05-06"]
+      "occupied": [
+        "2020-05-01",
+        "2020-05-02",
+        "2020-05-05",
+        "2020-05-06"
+      ]
     },
     {
       "id": "102",
@@ -90,7 +56,12 @@
       "guests": 2,
       "price": 240,
       "imgsrc": "../dist/hotel03.jpg",
-      "occupied": ["2020-05-01","2020-05-02","2020-05-05","2020-05-06"]
+      "occupied": [
+        "2020-05-01",
+        "2020-05-02",
+        "2020-05-05",
+        "2020-05-06"
+      ]
     },
     {
       "id": "104",
@@ -120,7 +91,10 @@
       "guests": 3,
       "price": 290,
       "imgsrc": "../dist/hotel06.jpg",
-      "occupied": []
+      "occupied": [        
+        "2020-05-06",
+        "2020-05-07",
+        "2020-05-09"]
     },
     {
       "id": "107",

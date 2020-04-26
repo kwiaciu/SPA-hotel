@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export const oops = () => {
-    const fragment = $(new DocumentFragment());
+    const fragment = $('<section></section>');
     fragment
         .append('<h2>Wrong page</h2>')
         .append(`<p>Page you are trying to access does not exist</p>

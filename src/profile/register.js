@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import { registerPage } from './register-page';
-import { registerPageHandler } from './registerPageHandler';
-import { registerFormHandler } from './registerFormHandler';
+import { registerPageHandler } from './register-page-handler';
 
 export const register = () => {
     $('#login').remove();
@@ -10,5 +9,7 @@ export const register = () => {
     const register = $(`<aside id="register"></aside>`);
 
     register.append(registerPage());
+    registerPageHandler(register);
+
     return register
 }

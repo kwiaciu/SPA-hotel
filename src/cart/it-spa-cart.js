@@ -1,23 +1,9 @@
 import $ from 'jquery';
 import { Cart } from './cart-cookie-handler';
 import { cartList } from './cart-list';
-import { cartHandlers } from './cart-handlers';
 
 export const itSpaCart = () => {
-    const cart = new Cart();
-
-    //jak się dowiedzieć że nastąpiła zmiana w cookies
-
-
-    // document.addEventListener('click', event => {
-    //     console.log(event);
-
-    //     // jeśli zaistniała zmiana w cookies, ponownie pobieram zawartość kosza
-    //     const newContent = cart.getValue();
-    //     setTimeout(() => console.log(cart.getValue()), 1000)
-    //     // i poprawiam wyświetlane przez kosz informacje
-    // });
-
+    // const cart = new Cart();
     const cartComponent = $(`
     <aside id="cart">
     <button id="show-cart" class="btn"><i class="icon">Cart</i></button>
@@ -26,8 +12,29 @@ export const itSpaCart = () => {
     const cartContainer = $('<div id="cart-container" class="cart"></div>')
     cartContainer
         .append(cartList())
-        .append($('<div><h2>Summary</h2></div>'));
+        .append($('<div><h3>Summary</h3></div>'));
     cartComponent.append(cartContainer)
-    cartHandlers();
+
+    // event handlers
+    $(cartComponent).on({
+        mouseenter: function () { $('#cart-container').slideDown() },
+        mouseleave: function () { $('#cart-container').slideUp() },
+    });
+
+    document.addEventListener('custom', () => {
+        console.log('Your custom event was heard indeed.')
+        $('#cart').remove();
+        $('main').before(itSpaCart());
+    });
+
+
+    // $(cartComponent).on('custom', () => {
+    //     // console.log('Your custom event was heard indeed.')
+    //     $('#cart').remove();
+    //     $('main').before(itSpaCart());
+    // })
+
+
+
     return cartComponent
 }

@@ -5,10 +5,11 @@ import { profilePage } from './profile-page';
 export const profile = () => {
     const cookie = new Login();
     const loggedIn = cookie.exists() && cookie.isNotEmpty();
-    const user = cookie.getValue().login;
-    const profile = $(new DocumentFragment());
+ 
+    const profile = $(new DocumentFragment);
 
     if (loggedIn) {
+        const user = cookie.getValue().login;
         console.log('logged in');
         console.log(user);
         $('main').empty();

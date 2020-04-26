@@ -3,10 +3,10 @@ import { roomsList } from './rooms-list';
 import { dateInput } from './date-input';
 
 export const rooms = () => {
-    const fragment = $(new DocumentFragment());
+    const fragment = $('<section></section>');
     fragment
         .append(dateInput())
-        .append('<h3>Rooms</h3>')
+        .append('<h2>Rooms</h2>')
         .append(roomsList())
 
     return fragment;

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export const contact = () => {
-    const fragment = $(new DocumentFragment());
+    const fragment = $('<section></section>');
     fragment
         .append('<h3>Contact</h3>')
         .append(`<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ad, et temporibus iusto doloribus repudiandae sed? Molestias explicabo veritatis a laboriosam praesentium repellat totam, velit aperiam voluptatem, debitis ducimus pariatur?</p>

@@ -9,7 +9,6 @@ export class Cart {
     cookie() {
         const cookies = document.cookie.split('; ');
         const itSpaCookie = cookies.find(cookie => cookie.startsWith(this.key));
-
         return itSpaCookie;
     }
 
@@ -29,14 +28,13 @@ export class Cart {
         }
     }
 
-
     // INPUT VALUE IS ARRAY OF OBJECTS
     setValue(value) {
         const stringifiedValue = JSON.stringify(value);
         document.cookie = `${this.key}=${stringifiedValue}`;
+        document.dispatchEvent(new Event('custom'));
+        // alert('coooooooooooookie!!!!!11')
     }
-
-
 
     // INPUT VALUE IS OBJECT
     addToCart(value) {
@@ -51,7 +49,6 @@ export class Cart {
         this.setValue(currentCart);
     }
 
-
     // INPUT VALUE IS OBJECT
     removeFromCart(value) {
         const currentCart = this.getValue();
@@ -59,7 +56,6 @@ export class Cart {
         const attendanceTest = (cartElement => value.id === cartElement.id)
         if (newCart.some(attendanceTest)) {
             newCart = newCart.filter((element => element.id !== value.id))
-
         }
         this.setValue(newCart);
     }

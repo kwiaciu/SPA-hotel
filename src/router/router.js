@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { routes } from './routes';
 import { oops } from '../views';
 import { routeChange } from './route-change';
+import { Login } from '../profile/login-cookie-handler';
 
 
 export class Router {
@@ -14,7 +15,6 @@ export class Router {
 
     mount(outlet) {
         this.outlet = outlet;
-
         // detail to np. { path: '/booking' } -> sprawdz nav.js
         this.body.on(routeChange, (event, detail) => {
             this.navigate(detail.path);
@@ -33,23 +33,21 @@ export class Router {
         return this.get(path) !== undefined;
     }
 
-    navigate(path, data = {}) {
+    navigate(path, historyPush = true, data = {}) {
         if (this.has(path)) {
-
-            //  np  { path: '/booking', data: {}, component: booking }
             const { component } = this.get(path);
-            
-            // component = np. home, booking
-            this.outlet.empty().append(component());
 
-
+            if (path === '/profile' && !(new Login().isNotEmpty())) {
+                this.outlet.append(component());
+            } else {
+                this.outlet.empty().append(component());
+            }
         } else {
-
             this.outlet.empty().append(oops());
         }
         //pushujemy do historii przeglądarki informację o odwiedzanej ścieżce
-        history.pushState(data, '', path);
-
+        if (historyPush === true) {
+            history.pushState(data, '', path);
+        }
     }
-
 }
