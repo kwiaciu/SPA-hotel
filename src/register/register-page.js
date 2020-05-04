@@ -14,5 +14,10 @@ export const registerPage = () => {
         .append('<input type="submit"></input>');
     registerPage.append(registerForm);
     registerFormHandler(registerPage);
+    $(registerForm).find('#mail-input').attr("type", "email")
+    $(registerForm).find('#password-input').attr("type", "password")
+    $(registerForm).find('#confirm-password-input').attr("type", "password")
+    $(registerForm).find('#phone-input').attr("type", "tel").attr("pattern", "[0-9]{9}").attr("placeholder", "123456789");
+
     return registerPage
 }

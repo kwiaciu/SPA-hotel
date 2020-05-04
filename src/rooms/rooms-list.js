@@ -15,7 +15,14 @@ export const roomsList = () => {
   // add button handler
   $(ul).on('click', 'button', function () {
     const buttonId = $(this).attr('id').slice(0,3);
-    cart.addToCart({ "id": buttonId });
+    const quantity = $('#departure-date').attr('data-quantity')
+    const dates = $('#departure-date').attr('data-dates')
+    const add = cart.addRoom({ "id": buttonId,
+                      "quantity": quantity,
+                      "dates": dates
+   });
+   console.log(add);
+
   });
 
   return ul;

@@ -36,7 +36,7 @@ export class Cart {
         // alert('coooooooooooookie!!!!!11')
     }
 
-    // INPUT VALUE IS OBJECT
+    // INPUT VALUE IS OBJECT {id: 123, quantity: 123}
     addToCart(value) {
         const currentCart = this.getValue();
         const attendanceTest = (cartElement => value.id === cartElement.id)
@@ -48,6 +48,24 @@ export class Cart {
         }
         this.setValue(currentCart);
     }
+
+    // INPUT VALUE IS OBJECT {id: 123, quantity: 123, dates: ['','']}
+    addRoom(value) {
+        const currentCart = this.getValue();
+        const attendanceTest = (cartElement => value.id === cartElement.id)
+        let response = ''
+        if (currentCart.some(attendanceTest)) {
+            const i = currentCart.findIndex(attendanceTest)
+            response = 'Room is already in cart';
+        } else {
+            currentCart.push(value);
+            response = 'Added to cart'
+        }
+        this.setValue(currentCart);
+        return response
+    }
+
+
 
     // INPUT VALUE IS OBJECT
     removeFromCart(value) {

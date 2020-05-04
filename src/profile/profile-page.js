@@ -15,14 +15,15 @@ export const profilePage = (user) => {
         .append(profilePageData(user))
         .append(cartSummary)
         .append(previousOrders)
+    $(profilePage).children('section').addClass('hidden')
 
-        $(profilePage).find('ul').on('click', 'button', (event) => {
-            const target = $(event.target);
-            const id = target.attr('id').slice(7);
-            console.log(id)
-            $(profilePage).children('section').addClass('hidden')
-            $('#'+id).removeClass('hidden')
-        })
+    $(profilePage).find('ul').on('click', 'button', (event) => {
+        const target = $(event.target);
+        const id = target.attr('id').slice(7);
+        console.log(id)
+        $(profilePage).children('section').addClass('hidden')
+        $('#' + id).removeClass('hidden')
+    })
 
     return profilePage
 }

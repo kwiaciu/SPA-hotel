@@ -12,17 +12,16 @@ export const itSpaCart = () => {
     const cartContainer = $('<div id="cart-container" class="cart"></div>')
     cartContainer
         .append(cartList())
-        .append($('<div><h3>Summary</h3></div>'));
     cartComponent.append(cartContainer)
 
-    // event handlers
+    
+    // ==EVENT HANDLERS== //
     $(cartComponent).on({
         mouseenter: function () { $('#cart-container').slideDown() },
         mouseleave: function () { $('#cart-container').slideUp() },
     });
 
     document.addEventListener('custom', () => {
-        console.log('Your custom event was heard indeed.')
         $('#cart').remove();
         $('main').before(itSpaCart());
     });

@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { Login } from './login-cookie-handler';
+import { Login } from '../login/login-cookie-handler';
 import { profileSidebarHandler } from './profile-sidebar-handler';
 
 

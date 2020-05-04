@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { routes } from './routes';
 import { oops } from '../views';
 import { routeChange } from './route-change';
-import { Login } from '../profile/login-cookie-handler';
+import { Login } from '../login/login-cookie-handler';
 
 
 export class Router {

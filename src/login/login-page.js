@@ -11,11 +11,10 @@ export const loginPage = () => {
         .append('<label for="password-input">Password</label>')
         .append('<input type="password" id="password-input">')
         .append('<input type="submit"></input>');
-
     loginPage.append(loginForm);
     loginPage.append('<p class="register">Or click <a id="link-register" href="javascript:;">here</a> to register new account</p>');
     loginFormHandler();
     loginPageHandler();
 
     return loginPage
-}
+}    

@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import { Login } from './login-cookie-handler';
-import { login } from './login';
+import { Login } from '../login/login-cookie-handler';
+import { login } from '../login/login';
 import { profilePage } from './profile-page';
 export const profile = () => {
     const cookie = new Login();

@@ -6,7 +6,7 @@ export const register = () => {
     $('#login').remove();
     $('main').off("click", "#login");
     $('main').off("submit", "#login-form");
-    const register = $(`<aside id="register"></aside>`);
+    const register = $(`<aside class="overlay" id="register"></aside>`);
 
     register.append(registerPage());
     registerPageHandler(register);

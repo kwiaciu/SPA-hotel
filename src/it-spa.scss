@@ -181,7 +181,7 @@ section {
 
   #cart-container {
     display: none;
-    max-height: 80vh;
+    max-height: 50vh;
     overflow: auto;
   }
 
@@ -196,8 +196,7 @@ section {
   right: 0;
 }
 
-#login,
-#register {
+.overlay {
   background-color: $black-transparent;
   position: fixed;
   // display: none;
@@ -243,6 +242,34 @@ section {
     transform: translate(-50%, -50%);
     min-width: 300px;
     max-width: 50%;
+    cursor: default;
+  }
+
+  #edit-cart {
+      background-color: $dark-olive-green;
+      z-index: 105;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 300px;
+      max-width: 50%;
+      cursor: default;
+
+      li {
+        button {
+          display: inline-block;
+          width: 33%;
+        }
+      }
+  }
+
+  #cart-summary {
+    background-color: $dark-olive-green;
+    width: 75%;
+    height: 80vh;
+    margin: auto;
+    overflow: auto;
     cursor: default;
   }
 }
