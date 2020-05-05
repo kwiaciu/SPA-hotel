@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { databaseAccess } from '../common/database-access';
 import { roomsListItem } from './rooms-list-item';
 import { Cart } from '../cart/cart-cookie-handler';
+import { customAlert } from '../common/custom-alert';
 
 export const roomsList = () => {
   const cart = new Cart();
@@ -12,43 +13,19 @@ export const roomsList = () => {
     .then(rooms => rooms.map(room => roomsListItem(room)))
     .then(roomsListItems => ul.append(roomsListItems));
 
-  // add button handler
-  $(ul).on('click', 'button', function () {
-    const buttonId = $(this).attr('id').slice(0,3);
+
+  // ==EVENT HANDLERS==
+  $(ul).on('click', '.cart-add', function () {
+    const buttonId = $(this).attr('id').slice(0, 3);
     const quantity = $('#departure-date').attr('data-quantity')
     const dates = $('#departure-date').attr('data-dates')
-    const add = cart.addRoom({ "id": buttonId,
-                      "quantity": quantity,
-                      "dates": dates
-   });
-   console.log(add);
-
+    cart.addRoom({
+      "id": buttonId,
+      "quantity": quantity,
+      "dates": dates
+    });
+    customAlert('Room added to cart!')
   });
 
   return ul;
-
-
 };
-
-
-
-
-
-
-// import $ from 'jquery';
-
-// export const roomsList = (pokoje) => {
-//   const ul = $('<ul></ul>');
-
-//   const rooms = pokoje.map(pokoj => {
-//     const li = $('<li></li>');
-//     li.text(pokoj.name);
-//     return li;
-//   });
-
-//   ul.append(rooms);
-
-//   return ul;
-// };
-
-// cookieStore

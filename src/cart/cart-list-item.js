@@ -1,7 +1,4 @@
 import $ from 'jquery';
-import { dateInput } from '../rooms/date-input';
-
-
 
 export const cartListItem = (item, quantity, stringDates) => {
     const listItem = $(`<li class="cart-item list-group-item"></li>`)
@@ -28,11 +25,9 @@ export const cartListItem = (item, quantity, stringDates) => {
             .append(`<p class="cart-item">Quantity: ${quantity}</p>`)
             .append(`<p class="cart-item">Price: ${item.price}</p>`)
     }
-    console.log(stringDates)
     listItem.append(`
     <button data-id='${item.id}' data-dates='${stringDates}' data-price='${item.price}' data-quantity='${quantity}' class="edit">Edit</button>
     <button id="${item.id}-delete" class="delete">Delete</button>`)
-
 
     return listItem
 }

@@ -8,7 +8,10 @@ export const roomsListItem = (room) => {
         .append(`<p>Number of beds: ${room.beds}</p>`)
         .append(`<p>Number of guests: ${room.guests}</p>`)
         .append(`<p>Price: ${room.price}</p>`)
-        .append(`<button id="${room.id}-add" class="btn cart-add">Add</button>`)
+        .append(`
+        <p class="unavailable">Room not available on selected dates</p>
+        <button id="${room.id}-add" class="btn cart-add" disabled>Add </button>
+        `)
     // $(li).css('order', room.id);
     return li;
 };

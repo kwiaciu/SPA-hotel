@@ -65,8 +65,6 @@ export class Cart {
         return response
     }
 
-
-
     // INPUT VALUE IS OBJECT
     removeFromCart(value) {
         const currentCart = this.getValue();

@@ -43,6 +43,7 @@ export const databaseAccess = {
       });
   },
 
+
   checkRooms(dates) {
     return fetch(`http://localhost:3000/rooms/`).then(response => response.json()).then(rooms => {
       const roomsOccupiedAtDates = [];
@@ -61,7 +62,5 @@ export const databaseAccess = {
       const status = room.occupied.some(date => dates.includes(date))
       return status
     })
-
-
   }
 };

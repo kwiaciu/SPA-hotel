@@ -3,8 +3,8 @@ import { databaseAccess } from '../common/database-access';
 import { cartListItem } from './cart-list-item';
 import { Cart } from './cart-cookie-handler';
 import { cartElementEdit } from './cart-element-edit';
-import { cartSummary } from './cart-summary';
 import { cartSummaryOverlay } from './cart-summary-overlay';
+import { customAlert } from '../common/custom-alert';
 
 
 export const cartList = () => {
@@ -39,10 +39,11 @@ export const cartList = () => {
                 }
             })
         cartList.append(totalPrice)
+        cartList.append($('<button id="summary-button" class="btn">Summary</button>'))
+
     } else {
         cartList.append($('<li>Your basket is empty</li>'))
     }
-    cartList.append($('<button id="summary-button" class="btn">Summary</button>'))
 
 
     // ==EVENT HANDLERS== //
@@ -51,12 +52,13 @@ export const cartList = () => {
     $(cartList).on('click', '.delete', function () {
         const buttonId = $(this).attr('id').slice(0, 3);
         cart.removeFromCart({ "id": buttonId });
-
+        // $('.overlay').remove();
+        customAlert('Room removed from cart');
+        
     });
 
     $(cartList).on('click', '.edit', function () {
         const elementId = $(this).attr('data-id');
-        const elementPrice = $(this).attr('data-price');
         const elementQuantity = $(this).attr('data-quantity');
         const elementDates = $(this).attr('data-dates');
         $('main').append(cartElementEdit(elementId, elementQuantity, elementDates));
@@ -65,6 +67,7 @@ export const cartList = () => {
     $(cartList).on('click', '#summary-button', function () {
         $('main').append(cartSummaryOverlay())
     })
+
 
 
     return cartList

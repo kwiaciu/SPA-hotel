@@ -21,16 +21,18 @@ export const dateInput = () => {
     // handling changes of date input
     $(dateInput).on('change', function () {
         // first reset rooms order and styles by id
-        $('#rooms-list').find("li").each(function () {
-            const id = $(this).attr('id').slice(0, 3);
-            $(this).css('order', id);
-            $(this).css('background-color', '');
-            $(this).find('button').prop('disabled', false);
-        });
-
         const dateOfArrival = $('#arrival-date').val()
         const dateOfDeparture = $('#departure-date').val()
         const dateDifference = date.dateDifference(dateOfDeparture, dateOfArrival)
+        if (dateOfArrival !== '' && dateOfDeparture !== '') {
+            $('#rooms-list').find("li").each(function () {
+                const id = $(this).attr('id').slice(0, 3);
+                $(this).css('order', id);
+                $(this).css('background-color', '');
+                $(this).find('button').prop('disabled', false);
+                $(this).find('.unavailable').addClass('hidden');
+            });
+        }
         // handle changes to picker, departure cannot be earlier than arrival etc
         $('#departure-date').attr('min', date.addDays(dateOfArrival, 1)).attr('disabled', false)
         if (dateDifference <= 0) {
@@ -48,6 +50,7 @@ export const dateInput = () => {
                 $(li).css('background-color', '#302d258a');
                 $(li).css('order', `1${room}`);
                 $(li).find('button').prop('disabled', true);
+                $(li).find('.unavailable').removeClass('hidden');
             })
 
         })

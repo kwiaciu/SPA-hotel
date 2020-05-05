@@ -364,8 +364,7 @@ button {
   -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background: $dark-olive-green;
   outline: 0px solid $light-grey;
 }
@@ -376,4 +375,20 @@ button:focus {
   div {
     margin: 1rem;
   }
+}
+
+.unavailable {
+  color: #750000;
+}
+
+.info {
+  text-align: center;
+  line-height: 50px;
+  color: $light-grey;
+  background-color: $black;
+  position: fixed;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 50px;
 }

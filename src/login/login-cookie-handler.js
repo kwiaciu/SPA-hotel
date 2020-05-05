@@ -6,7 +6,6 @@ export class Login {
         this.key = 'IT_SPA_LOGIN';
     }
 
-
     cookie() {
         const cookies = document.cookie.split('; ');
         const itSpaCookie = cookies.find(cookie => cookie.startsWith(this.key));
