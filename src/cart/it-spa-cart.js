@@ -23,9 +23,11 @@ export const itSpaCart = () => {
         mouseleave: function () { $('#cart-container').slideUp() },
     });
 
-    document.addEventListener('custom', () => {
+    $(document).on('custom', () => {
         $('#cart').remove();
+        $(document).off('custom')
         $('main').before(itSpaCart());
+        console.log('custom')
     });
 
     $(cartComponent).on('click', '#clear-cart', function () {

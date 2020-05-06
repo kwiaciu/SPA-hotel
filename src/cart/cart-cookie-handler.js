@@ -33,6 +33,7 @@ export class Cart {
         const stringifiedValue = JSON.stringify(value);
         document.cookie = `${this.key}=${stringifiedValue}`;
         document.dispatchEvent(new Event('custom'));
+        console.log(document.cookie)
         // alert('coooooooooooookie!!!!!11')
     }
 
