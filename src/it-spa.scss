@@ -206,15 +206,15 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 104;
+  z-index: 2;
 
   cursor: pointer;
 
   #login-page {
     background-color: $dark-olive-green;
-    z-index: 105;
+    z-index: 5;
     position: fixed;
-    top: 20%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 300px;
@@ -235,7 +235,7 @@ section {
   }
   #register-page {
     background-color: $dark-olive-green;
-    z-index: 105;
+    z-index: 4;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -243,11 +243,14 @@ section {
     min-width: 300px;
     max-width: 50%;
     cursor: default;
+    form {
+      overflow: auto;
+    }
   }
 
   #edit-cart {
       background-color: $dark-olive-green;
-      z-index: 105;
+      z-index: 3;
       position: fixed;
       top: 50%;
       left: 50%;
@@ -391,4 +394,33 @@ button:hover {
   left: calc(50% - 100px);
   width: 200px;
   height: 50px;
+}
+
+#judgement {
+  text-align: center;
+  color: $light-grey;
+  background-color: $black;
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  width: 100px;
+  // height: 100px;
+}
+
+#svg-circle {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.red {
+  stroke: red !important; 
+}
+
+.yellow {
+  stroke: yellow;
+}
+
+.green {
+  stroke: yellowgreen;
 }

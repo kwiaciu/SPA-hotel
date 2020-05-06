@@ -10,6 +10,8 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
     const cartEditContainer = $(`<aside class="overlay" id="cart-room-edit"></aside>`);
     const cartEdit = $(`<div id="edit-cart"></div>`)
     console.log(cartElementId)
+    console.log(quantity)
+    console.log(stringDates)
     if (cartElementId.charAt(0) === "1") {
         const dates = JSON.parse(stringDates)
         const firstDay = dates[0]
@@ -25,7 +27,6 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
                     $(roomLiElement).append(`<button id="${room.id}-delete" class="btn delete">Delete from cart</button>`)
                     $(roomLiElement).append('<button class="btn cancel">Cancel changes</button>')
                     cartEdit.append(roomLiElement);
-
                     // change total price on changing input
                     $(roomLiElement).on('change', () => {
                         $('#price').text(`Total price for room:  ${parseInt(room.price) * parseInt($('#departure-date-cart').attr('data-quantity'))}`)
@@ -47,18 +48,27 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
             if (!document.getElementById('edit-cart').contains(event.target)) {
                 console.log('removed')
                 $('.overlay').remove();
-                $('.overlay').empty();
                 $('main').off("click", ".overlay");
-                $('main').off("click", ".overlay");
+                $('main').off("click", ".edit");
             }
         }
+    })
+
+    $(cartEditContainer).on("click", ".delete", function () {
+        const buttonId = $(this).attr('id').slice(0, 3);
+        cart.removeFromCart({ "id": buttonId });
+        $(cartEditContainer).remove();
+        $(cartEditContainer).off("click", cartEditContainer);
+        customAlert('Removed from cart');
     })
 
     $('main').on("click", ".cancel", function (event) {
         $('.overlay').remove();
         $('main').off("click", ".overlay");
+        $('main').off("click", ".edit");
+
     })
-    
+
     $('main').on('click', '.edit', function () {
         const buttonId = $(this).attr('id').slice(0, 3);
         const quantity = $('#departure-date-cart').attr('data-quantity')
