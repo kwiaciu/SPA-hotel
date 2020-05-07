@@ -7,6 +7,7 @@ export const nav = () => {
     const navbar = $(`
     <nav class="navbar">
         <span class="nav-logo">Lunaria Hotel & Spa</span>
+        <span class="icon btn"><i class="material-icons">menu</i></span>
         <ul class="nav-list"></ul>
     </nav>
     `);

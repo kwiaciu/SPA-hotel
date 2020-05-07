@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { registerFormHandler } from './register-form-handler';
-import { passwordStrength } from './password-strength';
 import { circle } from './circle';
+import { passwordStrengthHandler } from './password-strength-handler';
 
 export const registerPage = () => {
     const registerPage = $('<div id="register-page"></div>');
@@ -35,43 +35,16 @@ export const registerPage = () => {
     <label for="code-input">Postcode</label>
     <input type="text" id="postcode-input" required>
     `)
-    judgment.append(circle)
-    judgment.append('<p id="comment"></p>')
+    judgment
+        .append(circle)
+        .append('<p id="comment"></p>');
     $('#password-input').append(judgment)
-    registerForm.append(mail, password, judgment, confirmPassword, phone, city, street, postcode)
     registerForm
+        .append(mail, password, judgment, confirmPassword, phone, city, street, postcode)
         .append('<button class="btn" type="submit">Submit</button>');
     registerPage.append(registerForm);
+
     registerFormHandler(registerPage);
-    $(registerPage).on('change', '#password-input', () => {
-        $('#part1').removeClass('green yellow red')
-        $('#part2').removeClass('green yellow red')
-        $('#part3').removeClass('green yellow red')
-        $('#part4').removeClass('green yellow red')
-        const val = $('#password-input').val()
-        const verdict = passwordStrength(val)
-        $('#judgement').removeClass('hidden')
-        if (verdict == 4) {
-            $('#part1').addClass('green')
-            $('#part2').addClass('green')
-            $('#part3').addClass('green')
-            $('#part4').addClass('green')
-            $('#comment').text('Great password!')
-        } else if (verdict == 3) {
-            $('#part1').addClass('green')
-            $('#part2').addClass('green')
-            $('#part3').addClass('green')
-            $('#comment').text('Good password')
-        } else if (verdict == 2) {
-            $('#part1').addClass('yellow')
-            $('#part2').addClass('yellow')
-            $('#comment').text('You can do better than this')
-        } else {
-            $('#part1').addClass('red')
-            $('#comment').text("Just don't")
-        }
-    })
-
-
+    passwordStrengthHandler(registerPage);
     return registerPage
 }

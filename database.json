@@ -98,8 +98,8 @@
     },
     {
       "id": "107",
-      "name": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus.",
-      "desc": "lorem ipsum ",
+      "name": "Pokój czwórkowy",
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus.",
       "beds": 4,
       "guests": 4,
       "price": 340,

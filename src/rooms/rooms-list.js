@@ -7,15 +7,15 @@ import { customAlert } from '../common/custom-alert';
 export const roomsList = () => {
   const cart = new Cart();
 
-  const ul = $('<ul id="rooms-list" class="list-group"></ul>');
+  const roomsList = $('<ul id="rooms-list" class="list-group"></ul>');
   // doczepia liste pokoi, gdy tylko przyjdzie z serwera
   databaseAccess.getRooms()
     .then(rooms => rooms.map(room => roomsListItem(room)))
-    .then(roomsListItems => ul.append(roomsListItems));
+    .then(roomsListItems => roomsList.append(roomsListItems));
 
 
   // ==EVENT HANDLERS==
-  $(ul).on('click', '.cart-add', function () {
+  $(roomsList).on('click', '.cart-add', function () {
     const buttonId = $(this).attr('id').slice(0, 3);
     const quantity = $('#departure-date').attr('data-quantity')
     const dates = $('#departure-date').attr('data-dates')
@@ -27,5 +27,5 @@ export const roomsList = () => {
     customAlert('Room added to cart!')
   });
 
-  return ul;
+  return roomsList;
 };

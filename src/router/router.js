@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { routes } from './routes';
-import { oops } from '../views';
+import { oops } from '../common/oops';
 import { routeChange } from './route-change';
 import { Login } from '../login/login-cookie-handler';
 

@@ -1,0 +1,142 @@
+@use './common/colors';
+
+body {
+  background-color: colors.$light-grey;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+
+  .nav-logo,
+  h1 {
+    font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+    vertical-align: middle;
+
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+    word-wrap: break-word;
+  }
+
+  h2 {
+    margin-left: 2rem;
+    padding: 0.5rem;
+    width: 25%;
+    text-align: center;
+    color: colors.$light-grey;
+    background-color: colors.$black;
+  }
+
+  h3 {
+    color: colors.$space;
+  }
+}
+
+.navbar {
+  background-color: colors.$black;
+  padding: 0.5rem 1rem 1rem 1rem;
+  color: colors.$light-grey;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin-bottom: -1rem;
+  margin-top: 0rem;
+}
+
+section {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.unavailable {
+  color: #750000;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+aside {
+  .icon {
+    position: relative;
+    top:-1px;
+  }
+}
+
+.btn {
+  color: colors.$light-grey;
+  font: inherit;
+  background-color: colors.$black;
+  padding: 1rem;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: colors.$dark-olive-green;
+    color: colors.$black;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: colors.$black-transparent; /* Green */
+    color: initial;
+
+    // &:hover {
+    // background-color: initial;
+    // }
+  }
+}
+
+.big-btn {
+  // background-color: #4CAF50; /* Green */
+  color: colors.$black;
+  font-size: 1.5rem;
+  padding: 1rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  &:hover {
+    background-color: colors.$dark-olive-green;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+button:hover {
+  background: colors.$dark-olive-green;
+  outline: 0px solid colors.$light-grey;
+}
+
+.info {
+  text-align: center;
+  line-height: 50px;
+  color: colors.$light-grey;
+  background-color: colors.$black;
+  position: fixed;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 50px;
+}
+
+.footer {
+  margin: 1rem;
+}

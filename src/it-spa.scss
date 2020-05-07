@@ -1,183 +1,25 @@
-$dark-olive-green: #6c442e;
-$sienna: #8d6644;
-$light-grey: #d2cecd;
-$black: #302d25;
-$black-transparent: #302d258a;
-$gray: #90715f;
+@use './common/colors';
+@use './common/base';
+@use './views/home/home';
 
-body {
-  background-color: $light-grey;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-
-  .nav-logo,
-  h1 {
-    font-family: "Cinzel", serif;
-    font-size: 1.5rem;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Playfair Display", serif;
-    word-wrap: break-word;
-  }
-
-  h2 {
-    margin-left: 2rem;
-    padding: 0.5rem;
-    width: 25%;
-    text-align: center;
-    color: $light-grey;
-    background-color: $black;
-  }
-
-  h3 {
-    color: $sienna;
-  }
-}
-
-main {
-  // margin: 2rem;
-  margin-top: 99px;
-  #hero {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: calc(100vh - 100px);
-
-    h2 {
-      margin-left: 0;
-      padding: 1rem;
-      width: auto;
-      text-align: initial;
-      color: $light-grey;
-      background-color: $black-transparent;
-    }
-    // margin-top: 17vh !important;
-
-    .front-page-header-top {
-      max-width: 60%;
-      position: relative;
-      top: 20vh;
-      left: 20%;
-    }
-
-    .front-page-header-bottom {
-      max-width: 60%;
-
-      position: relative;
-      top: 20.5vh;
-      left: 20%;
-    }
-
-    .front-page-desc {
-      position: relative;
-      top: 22vh;
-      left: 20%;
-      max-width: 40%;
-    }
-  }
-}
-
-section {
-  padding-top: 1rem;
-  margin: 2rem;
-  &.home {
-    margin: 0rem;
-    height: calc(100vh - 100px);
-  }
-}
-
-.section-break {
-  background-color: $light-grey;
-  color: $black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  .section-break-paragraph {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-
-#section-rooms {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: row;
-  align-items: center;
-
-  figure {
-    max-width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .home-rooms {
-    max-width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-
-      align-items: center;
-    }
-  }
-}
-
-#section-spa {
-  display: flex;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-
-  figure {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .home-spa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-}
-
-.footer {
-  margin: 1rem;
+#rooms-list {
+  overflow: scroll;
+  height: 80vh;
 }
 
 #cart {
-  background-color: $dark-olive-green;
+  background-color: colors.$dark-grey;
+  color: colors.$light-grey;
   position: fixed;
-  z-index: 100;
+  z-index: 7;
   top: calc(3rem + 17vh);
   right: 0px;
   max-width: 30%;
+
+  h3 {  color: colors.$light-grey;
+
+
+  }
 
   #cart-container {
     display: none;
@@ -190,29 +32,32 @@ section {
 }
 #profile-sidebar {
   display: block;
-  z-index: 102;
+  z-index: 5;
   position: fixed;
   top: 17vh;
   right: 0;
 }
 
 .overlay {
-  background-color: $black-transparent;
+  background-color: colors.$black-transparent;
   position: fixed;
-  // display: none;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
-
+  z-index: 11;
   cursor: pointer;
 
   #login-page {
-    background-color: $dark-olive-green;
-    z-index: 5;
+    background-color: colors.$dark-olive-green;
+    background-color: colors.$light-grey;
+    background-color: colors.$black;
+    background-color: #59544B;
+    color: colors.$black;
+    color: colors.$light-grey;
+    z-index: 12;
     position: fixed;
     top: 40%;
     left: 50%;
@@ -221,6 +66,7 @@ section {
     max-width: 50%;
     cursor: default;
   }
+
   p {
     text-align: center;
   }
@@ -233,9 +79,11 @@ section {
       margin: 0.5rem;
     }
   }
+
   #register-page {
-    background-color: $dark-olive-green;
-    z-index: 4;
+    background-color: colors.$light-grey;
+    color: colors.$black;
+    z-index: 13;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -249,26 +97,27 @@ section {
   }
 
   #edit-cart {
-      background-color: $dark-olive-green;
-      z-index: 3;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      min-width: 300px;
-      max-width: 50%;
-      cursor: default;
+    background-color: colors.$dark-grey;
+    color: colors.$light-grey;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 50%;
+    cursor: default;
 
-      li {
-        button {
-          display: inline-block;
-          width: 33%;
-        }
+    li {
+      button {
+        display: inline-block;
+        width: 33%;
       }
+    }
   }
 
   #cart-summary {
-    background-color: $dark-olive-green;
+    background-color: colors.$dark-olive-green;
     width: 75%;
     height: 80vh;
     margin: auto;
@@ -276,28 +125,6 @@ section {
     cursor: default;
   }
 }
-
-.navbar {
-  background-color: $black;
-  padding: 1rem;
-  color: $light-grey;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  width: 100%;
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  margin-bottom: -1rem;
-  margin-top: 0rem;
-  & .profile {
-    margin-right: 1rem;
-  }
-}
-
-
 
 .list-group {
   margin: 1rem;
@@ -316,62 +143,6 @@ section {
   }
 }
 
-.btn {
-  color: $light-grey;
-  font: inherit;
-  background-color: $black;
-
-  padding: 1rem;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  &:hover {
-    background-color: $dark-olive-green;
-  }
-
-  &:disabled {
-    cursor: default;
-    background-color: $black-transparent; /* Green */
-
-    // &:hover {
-    // background-color: initial;
-    // }
-  }
-}
-
-.big-btn {
-  // background-color: #4CAF50; /* Green */
-  color: $black;
-  font-size: 1.5rem;
-  padding: 1rem;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  &:hover {
-    background-color: $dark-olive-green;
-  }
-}
-
-.hidden {
-  display: none;
-}
-
-button {
-  display: inline-block;
-  border: none;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-button:hover {
-  background: $dark-olive-green;
-  outline: 0px solid $light-grey;
-}
-
 #date-picker {
   display: flex;
   flex-direction: row;
@@ -380,26 +151,10 @@ button:hover {
   }
 }
 
-.unavailable {
-  color: #750000;
-}
-
-.info {
-  text-align: center;
-  line-height: 50px;
-  color: $light-grey;
-  background-color: $black;
-  position: fixed;
-  top: calc(50% - 100px);
-  left: calc(50% - 100px);
-  width: 200px;
-  height: 50px;
-}
-
 #judgement {
   text-align: center;
-  color: $light-grey;
-  background-color: $black;
+  color: colors.$light-grey;
+  background-color: colors.$black;
   position: absolute;
   top: 80px;
   left: 300px;
@@ -414,7 +169,7 @@ button:hover {
 }
 
 .red {
-  stroke: red !important; 
+  stroke: red !important;
 }
 
 .yellow {
@@ -423,4 +178,9 @@ button:hover {
 
 .green {
   stroke: yellowgreen;
+}
+
+.index:hover,
+.index:focus {
+  color: colors.$space;
 }
