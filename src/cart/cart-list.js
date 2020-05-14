@@ -38,13 +38,14 @@ export const cartList = () => {
                     console.warn('error')
                 }
             })
-        cartList.append(totalPrice)
-        cartList.append($('<button id="summary-button" class="btn">Summary</button>'))
+        cartList
+            .append(totalPrice)
+            .append('<button class="btn" id="clear-cart"><i class="material-icons icon">clear</i> Clear</button>')
+            .append('<button id="summary-button" class="btn">Summary</button>')
 
     } else {
         cartList.append($('<li>Your basket is empty</li>'))
     }
-
 
     // ==EVENT HANDLERS== //
 
@@ -54,7 +55,7 @@ export const cartList = () => {
         cart.removeFromCart({ "id": buttonId });
         // $('.overlay').remove();
         customAlert('Room removed from cart');
-        
+
     });
 
     $(cartList).on('click', '.edit', function () {
@@ -67,6 +68,11 @@ export const cartList = () => {
     $(cartList).on('click', '#summary-button', function () {
         $('main').append(cartSummaryOverlay())
     })
+
+    $(cartList).on('click', '#clear-cart', function () {
+        cart.empty();
+        customAlert('Cart cleared!')
+    });
 
 
 

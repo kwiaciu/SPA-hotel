@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import { Cart } from './cart-cookie-handler';
 import { cartList } from './cart-list';
-import { customAlert } from '../common/custom-alert';
 
 export const itSpaCart = () => {
     const cart = new Cart();
@@ -13,7 +12,6 @@ export const itSpaCart = () => {
     const cartContainer = $('<div id="cart-container" class="cart"></div>')
     cartContainer
         .append(cartList())
-        .append('<button class="btn" id="clear-cart"><i class="material-icons icon">clear</i> Clear</button>')
     cartComponent.append(cartContainer)
 
 
@@ -30,10 +28,7 @@ export const itSpaCart = () => {
         console.log('custom')
     });
 
-    $(cartComponent).on('click', '#clear-cart', function () {
-        cart.empty();
-        customAlert('Cart cleared!')
-    });
+
 
     return cartComponent
 }

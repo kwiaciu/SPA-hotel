@@ -1,126 +1,134 @@
 @use '../../common/colors';
 
-    // margin: 2rem;
-    #hero {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    //   width: 100%;
-      height: calc(100vh - 100px);
-  
-      h2 {
-        margin-left: 0;
-        padding: 1rem;
-        width: auto;
-        text-align: initial;
-        color: colors.$light-grey;
-        background-color: colors.$black-transparent;
-      }
-      // margin-top: 17vh !important;
-  
-      .front-page-header-top {
-        max-width: 60%;
-        position: relative;
-        top: 20vh;
-        left: 20%;
-      }
-  
-      .front-page-header-bottom {
-        max-width: 60%;
-  
-        position: relative;
-        top: 20.5vh;
-        left: 20%;
-      }
-  
-      .front-page-desc {
-        position: relative;
-        top: 22vh;
-        left: 20%;
-        max-width: 40%;
-      }
+#hero {
+  position: absolute;
+  width: 100%;
+  padding: 0;
 
-
-    }
-
-
-  section.home {
-    margin: 0rem;
-    height: 100vh;
+  .block {
   }
 
-  .section-break {
-    background-color: colors.$light-grey;
-    color: colors.$black;
+  h2 {
+    margin-left: 0;
+    padding: 1rem;
+    width: auto;
+    text-align: initial;
+    color: colors.$light-grey;
+    background-color: colors.$black-transparent;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+  }
+  // margin-top: 17vh !important;
+
+  .front-page-header-top {
+    max-width: 60%;
+    position: relative;
+    top: 20vh;
+    left: 20%;
+  }
+
+  .front-page-header-bottom {
+    max-width: 60%;
+
+    position: relative;
+    top: 20.5vh;
+    left: 20%;
+  }
+
+  .front-page-desc {
+    position: relative;
+    top: 22vh;
+    left: 20%;
+    max-width: 40%;
+  }
+}
+
+section.home {
+  margin: 0rem;
+  height: 100vh;
+}
+
+.section-break {
+  background-color: colors.$light-grey;
+  color: colors.$black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+
+  .section-break-paragraph {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+#section-rooms {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  align-items: center;
+
+  figure {
+    max-width: 60%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 70vh !important;
-  
-    .section-break-paragraph {
-      margin-left: 10%;
-      margin-right: 10%;
+
+    img {
+      width: 100%;
     }
   }
-  
-  #section-rooms {
+
+  .home-rooms {
+    max-width: 40%;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: row;
-    align-items: center;
-  
-    figure {
-      max-width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    .wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-  
-      img {
-        width: 100%;
-      }
-    }
-  
-    .home-rooms {
-      max-width: 40%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+      align-items: center;
     }
   }
-  
-  #section-spa {
+}
+
+#section-spa {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  figure {
+    width: 50%;
     display: flex;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  
-    figure {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  
-      img {
-        width: 100%;
-      }
-    }
-  
-    .home-spa {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      width: 100%;
     }
   }
-  
+
+  .home-spa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.invisible {
+  opacity: 0;
+}

@@ -4,13 +4,12 @@ body {
   background-color: colors.$light-grey;
   margin: 0;
   font-family: "Raleway", sans-serif;
-
+  position: absolute;
   .nav-logo,
   h1 {
     font-family: "Cinzel", serif;
     font-size: 1.5rem;
     vertical-align: middle;
-
   }
 
   h2,
@@ -37,9 +36,20 @@ body {
 }
 
 .navbar {
-  background-color: colors.$black;
-  padding: 0.5rem 1rem 1rem 1rem;
+  width: 100%;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  background-color: colors.$black-transparent;
+  padding: 1rem;
   color: colors.$light-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .nav-logo {
+    cursor: pointer;
+  }
 }
 
 .nav-list {
@@ -47,13 +57,26 @@ body {
   list-style: none;
   margin-bottom: -1rem;
   margin-top: 0rem;
+
+  .nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+#hamburger {
+  position: fixed;
+  right: 1rem;
+  top: 0.1rem;
 }
 
 section {
-  padding-top: 1rem;
+  // margin-top: 4rem;
+  padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 .unavailable {
   color: #750000;
 }
@@ -66,7 +89,7 @@ section {
 aside {
   .icon {
     position: relative;
-    top:-1px;
+    top: -1px;
   }
 }
 
@@ -77,6 +100,7 @@ aside {
   padding: 1rem;
   transition-duration: 0.5s;
   cursor: pointer;
+
   &:hover {
     background-color: colors.$dark-olive-green;
     color: colors.$black;
@@ -86,10 +110,6 @@ aside {
     cursor: default;
     background-color: colors.$black-transparent; /* Green */
     color: initial;
-
-    // &:hover {
-    // background-color: initial;
-    // }
   }
 }
 
@@ -100,9 +120,14 @@ aside {
   padding: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
+
   &:hover {
     background-color: colors.$dark-olive-green;
   }
+}
+
+.trans {
+  background: none;
 }
 
 .hidden {
@@ -126,15 +151,17 @@ button:hover {
 }
 
 .info {
+  z-index: 49;
   text-align: center;
-  line-height: 50px;
+  // line-height: 50px;
   color: colors.$light-grey;
   background-color: colors.$black;
   position: fixed;
   top: calc(50% - 100px);
   left: calc(50% - 100px);
-  width: 200px;
-  height: 50px;
+  width: 250px;
+  min-height: 50px;
+  vertical-align: middle;
 }
 
 .footer {

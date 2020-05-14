@@ -9,14 +9,14 @@ export const cartSummaryOverlay = () => {
 
     // ==EVENT HANDLERS== //
 
-    $('main').on("click", ".overlay", function (event) {
-        if (!document.getElementById('cart-summary').contains(event.target)) {
-            $('.overlay').remove();
-            $('main').off("click", ".overlay");
-            // $('main').off("submit", "#login-form");
-            // $('main').off("click", "#link-register")
-        }
-    })
+    // $('main').on("click", "#cart-summary-overlay", function (event) {
+    //     if (!document.getElementById('cart-summary').contains(event.target)) {
+    //         $("#cart-summary-overlay").remove();
+    //         $('main').off("click", "#cart-summary-overlay");
+    //         // $('main').off("submit", "#login-form");
+    //         // $('main').off("click", "#link-register")
+    //     }
+    // })
 
     return cartSummaryOverlay
 }

@@ -7,21 +7,30 @@
   height: 80vh;
 }
 
+aside {
+  button {
+    width: 100px;
+    height: 75px;
+  }
+}
+
 #cart {
   background-color: colors.$dark-grey;
   color: colors.$light-grey;
   position: fixed;
   z-index: 7;
-  top: calc(3rem + 17vh);
+  top: calc(150px + 12vh);
   right: 0px;
-  max-width: 30%;
+  // max-width: 30%;
 
-  h3 {  color: colors.$light-grey;
-
-
+  h3 {
+    color: colors.$light-grey;
   }
 
   #cart-container {
+    max-width: min(400px, 100vw);
+    // max-width: ;
+
     display: none;
     max-height: 50vh;
     overflow: auto;
@@ -31,10 +40,11 @@
   }
 }
 #profile-sidebar {
-  display: block;
+  display: flex;
+  flex-direction: column;
   z-index: 5;
   position: fixed;
-  top: 17vh;
+  top: calc(12vh);
   right: 0;
 }
 
@@ -47,14 +57,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 11;
+  z-index: 19;
   cursor: pointer;
 
   #login-page {
     background-color: colors.$dark-olive-green;
     background-color: colors.$light-grey;
     background-color: colors.$black;
-    background-color: #59544B;
+    background-color: #59544b;
     color: colors.$black;
     color: colors.$light-grey;
     z-index: 12;
@@ -99,7 +109,7 @@
   #edit-cart {
     background-color: colors.$dark-grey;
     color: colors.$light-grey;
-    z-index: 10;
+    z-index: 20;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -126,6 +136,10 @@
   }
 }
 
+#cart-summary-overlay {
+  cursor: default;
+}
+
 .list-group {
   margin: 1rem;
   display: flex;
@@ -138,6 +152,7 @@
   margin: 1rem;
   display: flex;
   flex-direction: column;
+
   img {
     max-width: 20%;
   }
@@ -146,6 +161,7 @@
 #date-picker {
   display: flex;
   flex-direction: row;
+
   div {
     margin: 1rem;
   }

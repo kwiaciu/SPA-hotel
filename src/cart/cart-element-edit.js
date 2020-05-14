@@ -43,12 +43,12 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
 
     // ==EVENT HANDLERS== //
 
-    $('main').on("click", ".overlay", function (event) {
+    $('main').on("click", "#cart-room-edit", function (event) {
         if (!($(event.target).is("button"))) {
             if (!document.getElementById('edit-cart').contains(event.target)) {
                 console.log('removed')
-                $('.overlay').remove();
-                $('main').off("click", ".overlay");
+                $("#cart-room-edit").remove();
+                $('main').off("click", "#cart-room-edit");
                 $('main').off("click", ".edit");
             }
         }
@@ -64,7 +64,7 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
 
     $('main').on("click", ".cancel", function (event) {
         $('.overlay').remove();
-        $('main').off("click", ".overlay");
+        $('main').off("click", "#cart-room-edit");
         $('main').off("click", ".edit");
 
     })
@@ -79,11 +79,15 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
             "quantity": quantity,
             "dates": dates
         });
-        $('.overlay').remove();
+        $("#cart-room-edit").remove();
         $('main').off('click', '.edit');
-        $('main').off('click', '.overlay');
+        $('main').off('click', "#cart-room-edit");
         customAlert('Room was updated')
     });
+
+    $('main').keyup(function(e) {    // enter
+        if (e.keyCode === 27) $('.cancel').click();   // esc
+      });
 
 
     return cartEditContainer

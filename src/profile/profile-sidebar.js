@@ -11,11 +11,11 @@ export const profileSidebar = () => {
 
     if (loggedIn) {
         profileSidebar
-        .append('<button id="show-profile" class="btn"><i class="material-icons icon">account</i> Profile</button>')
-        .append('<button id="logout" class="btn"><i class="material-icons">exit_to_app</i></button>');
+            .append('<button id="show-profile" class="btn"><i class="material-icons icon">person</i> Profile</button>')
+            .append('<button id="logout" class="btn"><i class="material-icons">exit_to_app</i>Logout</button>');
     } else {
         profileSidebar
-        .append('<button id="show-profile" class="btn"><i class="material-icons icon">person</i> Profile</button>');
+            .append('<button id="show-profile" class="btn"><i class="material-icons icon">person</i> Profile</button>');
     }
     profileSidebarHandler();
     return profileSidebar

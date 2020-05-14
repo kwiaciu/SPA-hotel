@@ -39,15 +39,18 @@ export class Router {
 
             if (path === '/profile' && !(new Login().isNotEmpty())) {
                 this.outlet.append(component());
+
             } else {
+                if (historyPush === true) {
+                    history.pushState(data, '', path);
+                }
+
                 this.outlet.empty().append(component());
             }
         } else {
             this.outlet.empty().append(oops());
         }
         //pushujemy do historii przeglądarki informację o odwiedzanej ścieżce
-        if (historyPush === true) {
-            history.pushState(data, '', path);
-        }
+
     }
 }

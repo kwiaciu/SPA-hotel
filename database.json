@@ -19,8 +19,97 @@
       "code": "tyuio",
       "phone": "123456789",
       "previousOrders": []
+    },
+    {
+      "id": "asd@asd",
+      "password": "asd",
+      "mail": "asd@asd",
+      "city": "asd",
+      "street": "asd",
+      "phone": "123456789",
+      "previousOrders": []
+    },
+    {
+      "id": "asd@asdd",
+      "password": "asd",
+      "mail": "asd@asdd",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "asdf@adsf",
+      "password": "123",
+      "mail": "asdf@adsf",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "123@124",
+      "password": "asdf",
+      "mail": "123@124",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "123@1242",
+      "password": "123",
+      "mail": "123@1242",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "123@12434243",
+      "password": "123",
+      "mail": "123@12434243",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "asdf@adsf12312",
+      "password": "123",
+      "mail": "asdf@adsf12312",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "123@124123",
+      "password": "123",
+      "mail": "123@124123",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "asd@asd124124124",
+      "password": "123",
+      "mail": "asd@asd124124124",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "asdf@adsfaa",
+      "password": "asd",
+      "mail": "asdf@adsfaa",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
     }
-
   ],
   "rooms": [
     {
@@ -91,10 +180,11 @@
       "guests": 3,
       "price": 340,
       "imgsrc": "../dist/hotel06.jpg",
-      "occupied": [        
+      "occupied": [
         "2020-05-06",
         "2020-05-07",
-        "2020-05-09"]
+        "2020-05-09"
+      ]
     },
     {
       "id": "107",
