@@ -18,7 +18,7 @@ export const sectionLanding = () => {
         carousel('.hero-carousel')
         console.log(interval)
 
-    }, 1000)
+    }, 3000)
 
     $('body').on('routechange', () => clearInterval(interval));
 

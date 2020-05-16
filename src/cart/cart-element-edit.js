@@ -85,9 +85,9 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
         customAlert('Room was updated')
     });
 
-    $('main').keyup(function(e) {    // enter
+    $('main').keyup(function (e) {    // enter
         if (e.keyCode === 27) $('.cancel').click();   // esc
-      });
+    });
 
 
     return cartEditContainer

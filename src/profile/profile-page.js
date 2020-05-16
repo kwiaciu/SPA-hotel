@@ -8,7 +8,7 @@ import { routeChange } from '../router/route-change';
 
 
 export const profilePage = (user) => {
-    const profilePage = $('<section></section>');
+    const profilePage = $('<section id="profile-page"></section>');
     profilePage
         .append(`<ul id="profile-nav" class="nav-list">
                     <li class="nav-item profile"><button id="button-profile-data" class="btn">Personal data</button></li>
@@ -17,8 +17,8 @@ export const profilePage = (user) => {
                     <li class="nav-item profile"><button id="button-logout" class="btn">Logout</button></li>
                 </ul>`)
         .append(profilePageData(user))
-        .append(cartSummary)
-        .append(previousOrders)
+        .append(cartSummary())
+        .append(previousOrders())
     $(profilePage).children('section').slice(1).addClass('hidden')
     // $(profilePage).children('section').addClass('hidden')
 

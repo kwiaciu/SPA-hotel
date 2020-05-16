@@ -1,4 +1,4 @@
-@use './common/colors';
+@use 'common/colors';
 
 body {
   background-color: colors.$light-grey;
@@ -35,13 +35,19 @@ body {
   }
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .navbar {
   width: 100%;
   z-index: 15;
   position: fixed;
   top: 0;
   background-color: colors.$black-transparent;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   color: colors.$light-grey;
   display: flex;
   flex-direction: column;
@@ -71,10 +77,27 @@ body {
 }
 
 section {
-  // margin-top: 4rem;
   padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.list-group {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-group-item {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    max-width: 20%;
+  }
 }
 
 .unavailable {
@@ -91,6 +114,27 @@ aside {
     position: relative;
     top: -1px;
   }
+
+  button {
+    width: 100px;
+    height: 75px;
+  }
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+button:hover {
+  background: colors.$dark-olive-green;
+  outline: 0px solid colors.$light-grey;
 }
 
 .btn {
@@ -132,22 +176,6 @@ aside {
 
 .hidden {
   display: none;
-}
-
-button {
-  display: inline-block;
-  border: none;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-}
-
-button:hover {
-  background: colors.$dark-olive-green;
-  outline: 0px solid colors.$light-grey;
 }
 
 .info {

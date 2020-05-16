@@ -1,44 +1,14 @@
-@use './common/colors';
-@use './common/base';
-@use './views/home/home';
+@use 'common/colors';
+@use 'common/base';
+@use 'views/home/home';
+@use 'cart/cart';
+@use 'rooms/rooms';
 
 #rooms-list {
   overflow: scroll;
   height: 80vh;
 }
 
-aside {
-  button {
-    width: 100px;
-    height: 75px;
-  }
-}
-
-#cart {
-  background-color: colors.$dark-grey;
-  color: colors.$light-grey;
-  position: fixed;
-  z-index: 7;
-  top: calc(150px + 12vh);
-  right: 0px;
-  // max-width: 30%;
-
-  h3 {
-    color: colors.$light-grey;
-  }
-
-  #cart-container {
-    max-width: min(400px, 100vw);
-    // max-width: ;
-
-    display: none;
-    max-height: 50vh;
-    overflow: auto;
-  }
-
-  .list-group {
-  }
-}
 #profile-sidebar {
   display: flex;
   flex-direction: column;
@@ -88,73 +58,6 @@ aside {
     * {
       margin: 0.5rem;
     }
-  }
-
-  #register-page {
-    background-color: colors.$light-grey;
-    color: colors.$black;
-    z-index: 13;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 300px;
-    max-width: 50%;
-    cursor: default;
-    form {
-      overflow: auto;
-    }
-  }
-
-  #edit-cart {
-    background-color: colors.$dark-grey;
-    color: colors.$light-grey;
-    z-index: 20;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 300px;
-    max-width: 50%;
-    cursor: default;
-
-    li {
-      button {
-        display: inline-block;
-        width: 33%;
-      }
-    }
-  }
-
-  #cart-summary {
-    background-color: colors.$dark-olive-green;
-    width: 75%;
-    height: 80vh;
-    margin: auto;
-    overflow: auto;
-    cursor: default;
-  }
-}
-
-#cart-summary-overlay {
-  cursor: default;
-}
-
-.list-group {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-left: 0;
-}
-
-.list-group-item {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-
-  img {
-    max-width: 20%;
   }
 }
 

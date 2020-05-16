@@ -40,7 +40,7 @@ export const cartList = () => {
             })
         cartList
             .append(totalPrice)
-            .append('<button class="btn" id="clear-cart"><i class="material-icons icon">clear</i> Clear</button>')
+            .append('<button class="btn" id="clear-cart"><i class="material-icons icon">clear</i> Clear cart</button>')
             .append('<button id="summary-button" class="btn">Summary</button>')
 
     } else {

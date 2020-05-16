@@ -1,0 +1,68 @@
+@use 'common/colors';
+
+#cart {
+  background-color: colors.$dark-grey;
+  color: colors.$light-grey;
+  position: fixed;
+  z-index: 7;
+  top: calc(150px + 12vh);
+  right: 0px;
+  // max-width: 30%;
+
+  h3 {
+    color: colors.$light-grey;
+  }
+
+  #cart-container {
+    max-width: min(400px, 100vw);
+    // max-width: ;
+
+    display: none;
+    max-height: 50vh;
+    overflow: auto;
+  }
+
+  .list-group {
+  }
+}
+
+#edit-cart {
+  background-color: colors.$dark-grey;
+  color: colors.$light-grey;
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  max-width: 50%;
+  cursor: default;
+
+  li {
+    button {
+      display: inline-block;
+      width: 33%;
+    }
+  }
+}
+
+#cart-summary {
+  background-color: colors.$dark-olive-green;
+  width: 75%;
+  height: 80vh;
+  margin: auto;
+  overflow: auto;
+  cursor: default;
+
+  .big-btn {
+    width: 75%;
+  }
+
+  .close-summary {
+    float: right;
+  }
+}
+
+#cart-summary-overlay {
+  cursor: default;
+}

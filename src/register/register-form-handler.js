@@ -1,15 +1,9 @@
 import $ from 'jquery';
 import { checkRegisterForm } from './check-register-form';
+import { customAlert } from '../common/custom-alert';
 
 
 export const registerFormHandler = (container) => {
-    $(container).on("change", "#register-form", function (event) {
-        //TODO 
-        // 1. Password strength
-        // 2. Confirming password while writing
-        // 3. 
-    });
-
     $(container).on("submit", "#register-form", function (event) {
         event.preventDefault();
         const mail = $('#mail-input').val();
@@ -21,7 +15,7 @@ export const registerFormHandler = (container) => {
         const code = $('#code-input').val();
         // checkPassword(login, pass);
         if (!(password === confirmPassword)) {
-            console.log('password fields are not equal')
+            customAlert('Password fields are not the same')
         } else {
             const data = {
                 "id": mail,
@@ -34,7 +28,7 @@ export const registerFormHandler = (container) => {
                 "previousOrders": []
             };
             checkRegisterForm(data)
-            
+
             console.log('submit')
         }
     });

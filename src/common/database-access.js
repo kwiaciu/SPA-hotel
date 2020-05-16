@@ -39,7 +39,7 @@ export const databaseAccess = {
       .catch((error) => {
         // console.error('Error:', error);
         console.error('Error:', error);
-        return ('Error:', error);
+        return (error);
       });
   },
 

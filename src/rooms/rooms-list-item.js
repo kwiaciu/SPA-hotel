@@ -1,14 +1,35 @@
 import $ from 'jquery';
 
 export const roomsListItem = (room) => {
-    const li = $(`<li id='${room.id}-li' class="list-group-item"></li>`);
+    const li = $(`<li id='${room.id}-li' class="room-li"></li>`);
     li
-        .append(`<img class="img" src="${room.imgsrc}" alt="Photo of room">`)
-        .append(`<h3 class="room-header">${room.name}</h3>`)
-        .append(`<p>${room.desc}</p>`)
-        .append(`<p>Number of beds: ${room.beds}</p>`)
-        .append(`<p>Number of guests: ${room.guests}</p>`)
-        .append(`<p>Price: ${room.price}</p>`)
+        .append(`
+        <article class="room-container">
+            <figure class="room-photo">
+                <img class="img" src="${room.imgsrc}" alt="Photo of room">
+            </figure>
+            <div class="room-data">
+                <h3 class="room-header">${room.name}</h3>
+                <p class="room-desc">${room.desc}</p>
+                <div class="room-info">
+                    <ul>
+                        <li>
+                            <p>Beds:</p>
+                            <p>${room.beds}</p>
+                        </li>
+                        <li>                  
+                            <p>Guests:</p>
+                            <p>${room.guests}</p>
+                        </li>
+                    </ul>
+                    <div class="price">
+                        <h3>${room.price}<i>ћ</i></h3>
+                        <p>per night</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        `)
         .append(`<p class="unavailable">Room not available on selected dates</p>`)
         .append(`<button id="${room.id}-add" class="btn cart-add" disabled>Add </button>`)
     return li;
