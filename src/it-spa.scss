@@ -4,11 +4,6 @@
 @use 'cart/cart';
 @use 'rooms/rooms';
 
-#rooms-list {
-  overflow: scroll;
-  height: 80vh;
-}
-
 #profile-sidebar {
   display: flex;
   flex-direction: column;
@@ -61,15 +56,6 @@
   }
 }
 
-#date-picker {
-  display: flex;
-  flex-direction: row;
-
-  div {
-    margin: 1rem;
-  }
-}
-
 #judgement {
   text-align: center;
   color: colors.$light-grey;
@@ -97,9 +83,4 @@
 
 .green {
   stroke: yellowgreen;
-}
-
-.index:hover,
-.index:focus {
-  color: colors.$space;
 }

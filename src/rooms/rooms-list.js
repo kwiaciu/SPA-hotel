@@ -7,7 +7,7 @@ import { customAlert } from '../common/custom-alert';
 export const roomsList = () => {
   const cart = new Cart();
 
-  const roomsList = $('<ul id="rooms-list" class="list-group"></ul>');
+  const roomsList = $('<ul id="rooms-list" class="rooms-list"></ul>');
   // doczepia liste pokoi, gdy tylko przyjdzie z serwera
   databaseAccess.getRooms()
     .then(rooms => rooms.map(room => roomsListItem(room)))

@@ -1,15 +1,72 @@
 @use 'common/colors';
+.rooms {
+  height: 85vh;
+  padding-top: 5rem;
+  padding-right: 100px;
+}
+.rooms-header {
+  float: left;
+  margin: 1rem 2rem 1rem 2rem;
+  //   margin-top: 0;
+}
 
-.list-group {
-  margin: 1rem;
+#date-picker {
   display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-left: 0;
+  flex-direction: row;
+  margin: 1rem;
+  justify-content: space-around;
+
+  div {
+    // margin: 1rem;
+  }
+
+  input {
+    height: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    display: block;
+
+    &::-webkit-datetime-edit-month-field:focus,
+    &::-webkit-datetime-edit-day-field:focus,
+    &::-webkit-datetime-edit-year-field:focus {
+      background-color: colors.$dark-olive-green;
+    }
+    &:focus {
+      outline-color: colors.$gray;
+    }
+  }
+}
+
+.rooms-list {
+  overflow-y: scroll;
+  height: 65vh;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#rooms-index {
+  clear: left;
+  margin: 1rem;
+  padding: 1rem;
+  float: left;
+  font-size: 1.5rem;
+
+  .index {
+    padding: 2px;
+    cursor: pointer;
+  }
+
+  .index:hover,
+  .index:focus {
+    color: colors.$dark-olive-green;
+    outline: none;
+  }
 }
 
 .room-li {
-  margin: 1rem;
+  margin: 0rem 0rem 2rem 1rem;
   display: flex;
   flex-direction: column;
 }

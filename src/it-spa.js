@@ -18,7 +18,11 @@ main.before(profileSidebar());
 
 main.before(itSpaCart());
 
-window.addEventListener('popstate', () => {router.navigate(location.pathname, false)})
+window.addEventListener('load', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
+
+window.addEventListener('popstate', () => { router.navigate(location.pathname, false) })
 
 
 

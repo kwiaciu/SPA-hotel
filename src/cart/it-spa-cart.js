@@ -17,7 +17,9 @@ export const itSpaCart = () => {
 
     // ==EVENT HANDLERS== //
     $(cartComponent).on({
+        //settimeout
         mouseenter: function () { $('#cart-container').slideDown() },
+        //cleartimeout
         mouseleave: function () { $('#cart-container').slideUp() },
     });
 

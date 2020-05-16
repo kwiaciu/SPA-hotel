@@ -4,12 +4,12 @@ import { dateInput } from './date-input';
 import { roomsIndex } from './rooms-index';
 
 export const rooms = () => {
-    const fragment = $('<section></section>');
+    const fragment = $('<section class="rooms"></section>');
     fragment
+        .append('<h2 class="rooms-header">Rooms</h2>')
         .append(dateInput())
-        .append('<h2>Rooms</h2>')
         .append(roomsIndex())
         .append(roomsList())
-    
+
     return fragment;
 };

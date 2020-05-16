@@ -25,7 +25,7 @@ export const dateInput = () => {
         const dateOfDeparture = $('#departure-date').val()
         const dateDifference = date.dateDifference(dateOfDeparture, dateOfArrival)
         if (dateOfArrival !== '' && dateOfDeparture !== '') {
-            $('#rooms-list').find("li").each(function () {
+            $('#rooms-list').find(".room-li").each(function () {
                 const id = $(this).attr('id').slice(0, 3);
                 $(this).css('order', id);
                 $(this).css('background-color', '');
@@ -43,7 +43,7 @@ export const dateInput = () => {
         const listDateDifference = date.listDateDifference(dateOfArrival, dateOfDeparture)
         const occupiedRooms = databaseAccess.checkRooms(listDateDifference);
         $('#departure-date').attr('data-quantity', listDateDifference.length)
-        $('#departure-date').attr('data-dates',JSON.stringify(listDateDifference))
+        $('#departure-date').attr('data-dates', JSON.stringify(listDateDifference))
         occupiedRooms.then(occRooms => {
             occRooms.map(room => {
                 const li = $(`#${room}-add`).parent();

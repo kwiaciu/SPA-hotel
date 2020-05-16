@@ -12,8 +12,6 @@ export const order = (userData) => {
             code: '',
         }
     }
-
-    console.log(userData.mail)
     const orderPage = $('<div id="order-page"></div>');
     const orderForm = $('<form action="" id="order-form"></form>');
     const mail = $(`

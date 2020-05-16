@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { customAlert } from '../common/custom-alert';
 import { Cart } from './cart-cookie-handler';
 import { cartSummary } from './cart-summary'
+import { orderSummary } from './order-summary';
 
 export const orderFormHandler = (container) => {
     const cart = new Cart();
@@ -30,7 +31,7 @@ export const orderFormHandler = (container) => {
         $('#cart-summary-overlay').remove();
         $('#cart-summary').off();
         $('#cart-summary-overlay').off();
-        cart.empty()
+        $('main').append(orderSummary(data))
         console.log(data)
     });
 
