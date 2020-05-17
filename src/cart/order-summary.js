@@ -32,14 +32,21 @@ export const orderSummary = (data) => {
             </li>
         </ul>
     </article>
-    `)
+        `)
 
     const orderedItems = cartList()
+    const button = (`<button class="btn go-back")">Go back to home page</button>`)
 
-    orderSummary.append(`<h3>Your items</h3>`, orderedItems)
+    orderSummary.append(`<h3> Your items</h3 > `, orderedItems)
     $(orderSummary).find('button').remove();
+    orderSummary.append(button)
     cart.empty()
 
+    $(orderSummary).on('click', 'button', () => {
+        console.log('clicked')
+        orderSummary.trigger('routechange', { path: '/' })
+        location.reload();
+    })
 
     return orderSummary
 }

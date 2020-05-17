@@ -32,7 +32,7 @@ export const order = (userData) => {
     `)
     const postcode = $(`
     <label for="code-input">Postcode</label>
-    <input type="text" id="postcode-input" value="${userData.code}" required>
+    <input type="text" id="code-input" value="${userData.code}" required>
     `)
 
     orderForm
@@ -41,7 +41,6 @@ export const order = (userData) => {
         .append('<button class="btn cancel" type="button">Cancel</button>');
     orderPage.append(orderForm);
     orderFormHandler(orderPage)
-
 
     return orderPage
 }

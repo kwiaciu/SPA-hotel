@@ -17,10 +17,12 @@ export const itSpaCart = () => {
 
     // ==EVENT HANDLERS== //
     $(cartComponent).on({
-        //settimeout
-        mouseenter: function () { $('#cart-container').slideDown() },
-        //cleartimeout
-        mouseleave: function () { $('#cart-container').slideUp() },
+        mouseenter: function () {
+            $('#cart-container').slideDown()
+        },
+        mouseleave: function () {
+            $('#cart-container').slideUp()
+        },
     });
 
     $(document).on('custom', () => {

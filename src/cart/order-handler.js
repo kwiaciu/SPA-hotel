@@ -31,6 +31,7 @@ export const orderFormHandler = (container) => {
         $('#cart-summary-overlay').remove();
         $('#cart-summary').off();
         $('#cart-summary-overlay').off();
+        $('main').empty();
         $('main').append(orderSummary(data))
         console.log(data)
     });
@@ -47,6 +48,4 @@ export const orderFormHandler = (container) => {
         }
 
     })
-
-
 }

@@ -12,10 +12,6 @@ export const nav = () => {
     </nav>
     `);
 
-    // nav item spodziewa się funkcji która będzie wywołana przy kilknięciu
-    // const bookingNavItem = navItem("Booking",() => navbar.trigger(routeChange, { path: '/booking' }));
-    // navbar.find('ul').append(bookingNavItem);
-
     routes.map((route) => {
         const newNavItem = navItem(route.name, () => navbar.trigger(routeChange, { path: route.path }))
         navbar.find('ul').append(newNavItem);
@@ -34,16 +30,10 @@ export const nav = () => {
         navbar.trigger(routeChange, { path: '/' })
     })
 
-
-
     $(document).on('routechange', function () {
         setTimeout(function () {
-
             $('.navbar .nav-list').slideUp(500, 'swing')
-
         }, 500)
-
-
     })
 
 

@@ -9,124 +9,6 @@
       "code": "12-345",
       "phone": "987654321",
       "previousOrders": []
-    },
-    {
-      "id": "asds@asfa",
-      "password": "123",
-      "mail": "asds@asfa",
-      "city": "ertyu",
-      "street": "fghj",
-      "code": "tyuio",
-      "phone": "123456789",
-      "previousOrders": []
-    },
-    {
-      "id": "asd@asd",
-      "password": "asd",
-      "mail": "asd@asd",
-      "city": "asd",
-      "street": "asd",
-      "phone": "123456789",
-      "previousOrders": []
-    },
-    {
-      "id": "asd@asdd",
-      "password": "asd",
-      "mail": "asd@asdd",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "asdf@adsf",
-      "password": "123",
-      "mail": "asdf@adsf",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "123@124",
-      "password": "asdf",
-      "mail": "123@124",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "123@1242",
-      "password": "123",
-      "mail": "123@1242",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "123@12434243",
-      "password": "123",
-      "mail": "123@12434243",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "asdf@adsf12312",
-      "password": "123",
-      "mail": "asdf@adsf12312",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "123@124123",
-      "password": "123",
-      "mail": "123@124123",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "asd@asd124124124",
-      "password": "123",
-      "mail": "asd@asd124124124",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "asdf@adsfaa",
-      "password": "asd",
-      "mail": "asdf@adsfaa",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "asdf@adsfafadsaffdf",
-      "password": "asdf",
-      "mail": "asdf@adsfafadsaffdf",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
-    },
-    {
-      "id": "asdf@adsf12312asdf",
-      "password": "asdf",
-      "mail": "asdf@adsf12312asdf",
-      "city": "213",
-      "street": "adsf",
-      "phone": "134567688",
-      "previousOrders": []
     }
   ],
   "rooms": [
@@ -229,7 +111,7 @@
     {
       "id": "501",
       "name": "Masaż rozgrzanym monitorem",
-      "desc": "lorem ipsum ",
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet co",
       "area": "back",
       "time": 30,
       "price": 80,
@@ -238,7 +120,7 @@
     {
       "id": "502",
       "name": "Biczowanie kablem od myszy",
-      "desc": "lorem ipsum ",
+      "desc": "Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
       "area": "back",
       "time": 20,
       "price": 70,
@@ -247,7 +129,7 @@
     {
       "id": "503",
       "name": "Peeling odłamkami płyty CD",
-      "desc": "lorem ipsum ",
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis  elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
       "area": "face",
       "time": 15,
       "price": 50,
@@ -256,7 +138,7 @@
     {
       "id": "504",
       "name": "Pedicure woskiem z USB",
-      "desc": "lorem ipsum ",
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere ",
       "area": "legs",
       "time": 25,
       "price": 100,
@@ -265,7 +147,7 @@
     {
       "id": "505",
       "name": "Manicure analogowo-cyfrowy",
-      "desc": "lorem ipsum ",
+      "desc": "Lorem ipsum, Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
       "area": "hands",
       "time": 45,
       "price": 150,
@@ -274,7 +156,7 @@
     {
       "id": "506",
       "name": "Kąpiel w gorącej kawie",
-      "desc": "lorem ipsum ",
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis ",
       "area": "body",
       "time": 60,
       "price": 200,
@@ -283,7 +165,7 @@
     {
       "id": "507",
       "name": "Depilacja dyskiem twardym",
-      "desc": "lorem ipsum ",
+      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing ",
       "area": "body",
       "time": 45,
       "price": 120,

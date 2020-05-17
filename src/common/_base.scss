@@ -5,6 +5,9 @@ body {
   margin: 0;
   font-family: "Raleway", sans-serif;
   position: absolute;
+  *::selection {
+    background-color: colors.$dark-olive-green;
+  }
   .nav-logo,
   h1 {
     font-family: "Cinzel", serif;
