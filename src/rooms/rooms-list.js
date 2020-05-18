@@ -19,12 +19,12 @@ export const roomsList = () => {
     const buttonId = $(this).attr('id').slice(0, 3);
     const quantity = $('#departure-date').attr('data-quantity')
     const dates = $('#departure-date').attr('data-dates')
-    cart.addRoom({
+    const response = cart.addRoom({
       "id": buttonId,
       "quantity": quantity,
       "dates": dates
     });
-    customAlert('Room added to cart!')
+    customAlert(response)
   });
 
   return roomsList;

@@ -4,6 +4,8 @@ import { roomsListItem } from '../rooms/rooms-list-item';
 import { databaseAccess } from '../common/database-access';
 import { Cart } from './cart-cookie-handler';
 import { customAlert } from '../common/custom-alert';
+import { editRoom } from './edit-room';
+import { editTreatment } from './edit-treatment';
 
 export const cartElementEdit = (cartElementId, quantity, stringDates) => {
     const cart = new Cart();
@@ -13,30 +15,12 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
     console.log(quantity)
     console.log(stringDates)
     if (cartElementId.charAt(0) === "1") {
-        const dates = JSON.parse(stringDates)
-        const firstDay = dates[0]
-        const lastDay = dates[dates.length - 1]
-        const getRoom = () => {
-            databaseAccess.getRoom(cartElementId)
-                .then(room => {
-                    const roomLiElement = roomsListItem(room);
-                    $(`<p id='price'>Total price for room: ${parseInt(room.price) * parseInt(quantity)} </p>`).insertBefore($(roomLiElement).find('.cart-add'));
-                    $(dateInputCart(firstDay, lastDay, room.id)).insertBefore($(roomLiElement).find('.cart-add'))
-                    $(roomLiElement).find('.unavailable').remove();
-                    $(roomLiElement).find('.cart-add').text('Save changes').addClass('edit')
-                    $(roomLiElement).append(`<button id="${room.id}-delete" class="btn delete">Delete from cart</button>`)
-                    $(roomLiElement).append('<button class="btn cancel">Cancel changes</button>')
-                    cartEdit.append(roomLiElement);
-                    // change total price on changing input
-                    $(roomLiElement).on('change', () => {
-                        $('#price').text(`Total price for room:  ${parseInt(room.price) * parseInt($('#departure-date-cart').attr('data-quantity'))}`)
-                    })
-                })
-        }
-        getRoom();
+        databaseAccess.getRoom(cartElementId)
+            .then(room => cartEdit.append(editRoom(room, quantity, stringDates)))
+    } else if (cartElementId.charAt(0) === "5") {
+        databaseAccess.getTreatment(cartElementId)
+            .then(treatment => cartEdit.append(editTreatment(treatment, quantity)))
     }
-    //TODO: rewrite it as another function - not roomsListItem -> too many dynamic changes 
-
 
     cartEditContainer.append(cartEdit)
 
@@ -71,22 +55,29 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
 
     $('main').on('click', '.edit', function () {
         const buttonId = $(this).attr('id').slice(0, 3);
-        const quantity = $('#departure-date-cart').attr('data-quantity')
-        const dates = $('#departure-date-cart').attr('data-dates')
-        cart.removeFromCart({ "id": buttonId });
-        cart.addRoom({
-            "id": buttonId,
-            "quantity": quantity,
-            "dates": dates
-        });
-        $("#cart-room-edit").remove();
-        $('main').off('click', '.edit');
-        $('main').off('click', "#cart-room-edit");
-        customAlert('Room was updated')
+        if (cartElementId.charAt(0) === "1") {
+            const quantity = $('#departure-date-cart').attr('data-quantity')
+            const dates = $('#departure-date-cart').attr('data-dates')
+            cart.removeFromCart({ "id": buttonId });
+            cart.addRoom({
+                "id": buttonId,
+                "quantity": quantity,
+                "dates": dates
+            });
+            $("#cart-room-edit").remove();
+            $('main').off('click', '.edit');
+            $('main').off('click', "#cart-room-edit");
+            customAlert('Room was updated')
+        } else if (cartElementId.charAt(0) === "5") {
+            cart.removeFromCart({ "id": buttonId })
+            const newQuantity = $('#change-treatment-quantity').val();
+            cart.addToCart({ "id": buttonId, "quantity": newQuantity });
+            customAlert('Treatment was updated')
+        }
     });
 
-    $('main').keyup(function (e) {    // enter
-        if (e.keyCode === 27) $('.cancel').click();   // esc
+    $('main').keyup(function (e) {
+        if (e.keyCode === 27) { $('main').trigger("click", ".cancel") };   // esc
     });
 
 

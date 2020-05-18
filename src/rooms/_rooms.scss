@@ -10,16 +10,15 @@
   //   margin-top: 0;
 }
 
-#date-picker {
+#date-picker,
+#date-picker-cart {
   display: flex;
   flex-direction: row;
   margin: 1rem;
   justify-content: space-around;
+}
 
-  div {
-    // margin: 1rem;
-  }
-
+.date-input {
   input {
     height: 2rem;
     font-size: 1.5rem;
@@ -36,7 +35,6 @@
     }
   }
 }
-
 .rooms-list {
   overflow-y: scroll;
   height: 65vh;
@@ -126,4 +124,14 @@
       }
     }
   }
+}
+
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
