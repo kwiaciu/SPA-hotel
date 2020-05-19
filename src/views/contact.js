@@ -1,12 +1,36 @@
 import $ from 'jquery';
 
 export const contact = () => {
-    const fragment = $('<section></section>');
-    fragment
-        .append('<h3>Contact</h3>')
-        .append(`<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ad, et temporibus iusto doloribus repudiandae sed? Molestias explicabo veritatis a laboriosam praesentium repellat totam, velit aperiam voluptatem, debitis ducimus pariatur?</p>
-        <p>Odit obcaecati praesentium nesciunt voluptates ullam est, sed ab perferendis eum. Amet, cumque. Officiis amet qui tenetur cupiditate. Vitae doloremque quis dolore, eveniet alias magnam reprehenderit tempora dignissimos nam quasi.</p>
-        <p>Eos architecto corrupti laboriosam animi aliquam minima quibusdam, numquam ducimus at dolorem atque quaerat nihil non vero ipsam, minus eveniet quis! Nisi placeat qui quos illum. Quas quo magnam hic.</p>`);
+    const fragment = $(`<div id="contact"></div>`);
+
+    const section = $('<section ></section>');
+
+    const contact = $(`
+    <div class="contact">
+        <h3>Informations</h3>
+        <ul>
+            <li><b>Phone Number:</b><p>954-216-0059</p></li>
+            <li><b>Mobile Number:</b><p>561-287-7093</p></li>
+            <li><b>E-mail address:</b><p>info@lunaria.spa.com</p></li>
+        </ul>
+    </div>`)
+    const address = $(`
+        <address class="address">
+        <h3>Address</h3>
+            <ul>
+                <li><b>Street:</b><p>1894 Sycamore Fork Road</p></li>
+                <li><b>City:</b><p>Boca Raton</p></li>
+                <li><b>Zip Code:</b><p>33486</p></li>
+            </ul>
+        </address>`)
+
+    section
+        .append('<h2>Contact</h2>')
+        .append(contact, address)
+
+    fragment.append(section)
 
     return fragment;
 };
+
+

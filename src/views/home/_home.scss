@@ -6,12 +6,15 @@
   padding: 0;
 
   h2 {
-    margin-left: 0;
+    margin: 1rem 0 0 0;
     padding: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
     width: auto;
     text-align: initial;
     color: colors.$light-grey;
     background-color: colors.$black-transparent;
+    display: inline-block;
   }
 
   img {
@@ -46,6 +49,15 @@
   }
 }
 
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+p {
+  font-weight: 300;
+}
+
 section.home {
   margin: 0rem;
   height: 100vh;
@@ -61,8 +73,10 @@ section.home {
   height: 70vh;
 
   .section-break-paragraph {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 2rem;
+    font-weight: 200;
   }
 }
 
@@ -74,13 +88,19 @@ section.home {
   align-items: center;
 
   figure {
-    max-width: 60%;
+    width: 70%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
     img {
+      position: absolute;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
     }
   }
 
@@ -99,18 +119,23 @@ section.home {
 
 #section-spa {
   display: flex;
+  flex-direction: column;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 
   figure {
-    width: 50%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 
     img {
-      width: 100%;
+      width: 33%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
     }
   }
 
@@ -128,4 +153,10 @@ section.home {
 
 .invisible {
   opacity: 0;
+}
+
+.big-btn {
+  margin: 2rem;
+  background-color: colors.$dark-olive;
+  color: colors.$light-grey;
 }

@@ -14,6 +14,5 @@ export const home = () => {
         .append(sectionBreak('And here bs about spa placeat iusto dignissimos, vitae repudiandae facere corrupti soluta unde illum reiciendis libero mollitia voluptates?'))
         .append(sectionSpa())
 
-
     return fragment;
 };

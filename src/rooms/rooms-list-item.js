@@ -26,11 +26,14 @@ export const roomsListItem = (room) => {
                         <h3>${room.price}<i>ћ</i></h3>
                         <p>per night</p>
                     </div>
+
                 </div>
+                <p class="unavailable">Room not available on selected dates</p>
+                <button id="${room.id}-add" class="btn cart-add" disabled>Add </button>
             </div>
         </article>
         `)
-        .append(`<p class="unavailable">Room not available on selected dates</p>`)
-        .append(`<button id="${room.id}-add" class="btn cart-add" disabled>Add </button>`)
+        .append(``)
+        .append(``)
     return li;
 };

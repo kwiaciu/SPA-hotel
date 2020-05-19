@@ -74,6 +74,35 @@
   position: relative;
 }
 
+#contact {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  section {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    b {
+      font-weight: 400;
+    }
+
+    h2 {
+      grid-column: span 3;
+    }
+
+    .address {
+      text-align: right;
+    }
+  }
+}
+
 .red {
   stroke: red !important;
 }
