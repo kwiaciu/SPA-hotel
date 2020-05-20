@@ -15,13 +15,16 @@ export const itSpaCart = () => {
     cartComponent.append(cartContainer)
 
 
-    // ==EVENT HANDLERS== //
+    // == EVENT HANDLERS == //
     $(cartComponent).on({
         mouseenter: function () {
             $('#cart-container').slideDown()
+            $('#show-cart').addClass('cart-visible')
         },
         mouseleave: function () {
             $('#cart-container').slideUp()
+            $('#show-cart').removeClass('cart-visible')
+
         },
     });
 

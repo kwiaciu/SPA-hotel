@@ -1,33 +1,31 @@
 import $ from 'jquery';
 
 export const cartListItem = (item, quantity, stringDates) => {
-    const listItem = $(`<li class="cart-item list-group-item"></li>`)
+    const listItem = $(`<li class="cart-item"></li>`)
     listItem
-        .append(`<img class="img" src="${item.imgsrc}" alt="Photo of cart item">`)
-        .append(`<h3 class="cart-header">${item.name}</h3>`)
+        .append(`<header class="cart-item-header"><img class="img" src="${item.imgsrc}" alt="Photo of cart item"><h3 class="cart-header">${item.name}</h3></header>`)
     if (stringDates !== undefined) {
         const dates = JSON.parse(stringDates)
         const firstDay = dates[0]
         const lastDay = dates[dates.length - 1]
         listItem
             .append(`
-            <div>
-                <div>
-                    <p class="cart-item">From:</p><p>${firstDay}</p>
-                </div>
-                <div>
-                    <p class="cart-item">To:</p><p>${lastDay}</p>
-                </div>
+            <div class="center">
+                <p>${firstDay} &#8594; ${lastDay}</p>
             </div>`)
-            .append(`<p class="cart-item">Price: ${item.price * quantity}</p>`)
     } else {
         listItem
-            .append(`<p class="cart-item">Quantity: ${quantity}</p>`)
-            .append(`<p class="cart-item">Price: ${item.price}</p>`)
+            .append(`<p class="center">Quantity: ${quantity}</p>`)
     }
     listItem.append(`
-    <button data-id='${item.id}' data-dates='${stringDates}' data-price='${item.price}' data-quantity='${quantity}' class="edit">Edit</button>
-    <button id="${item.id}-delete" class="delete">Delete</button>`)
+    <footer class="cart-item-footer">
+        <div class="">Price: <h4>${item.price * quantity}<i>ћ</i></h4></div>
+        <div>
+        <button data-id='${item.id}' data-dates='${stringDates}' data-price='${item.price}' data-quantity='${quantity}'     class="edit btn">Edit</button>
+        <button id="${item.id}-delete" class="delete btn">Delete</button>
+        </div>
+    </footer>
+    `)
 
     return listItem
 }

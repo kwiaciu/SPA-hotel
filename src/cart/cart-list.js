@@ -15,7 +15,7 @@ export const cartList = () => {
     const cartList = $('<ul id="cart-list" class="list-group"></ul>')
 
     if (isCartNotEmpty) {
-        const totalPrice = $('<h3>Total:</h3>')
+        const totalPrice = $('<h3 class="total">Total:</h3>')
         let total = 0;
         cartValue         // value of cookies
             .map((cartCookieElement) => {
@@ -25,7 +25,8 @@ export const cartList = () => {
                             cartList
                                 .prepend(cartListItem(room, cartCookieElement.quantity, cartCookieElement.dates));
                             total += room.price * cartCookieElement.quantity
-                            totalPrice.text(`Total: ${total}`)
+                            totalPrice.html(`Total: ${total}<i>ћ
+                            </i>`)
 
                         }
                         )
@@ -40,8 +41,12 @@ export const cartList = () => {
             })
         cartList
             .append(totalPrice)
-            .append('<button class="btn" id="clear-cart"><i class="material-icons icon">clear</i> Clear cart</button>')
-            .append('<button id="summary-button" class="btn">Summary</button>')
+            .append(`
+            <div class="buttons">
+                <button id="summary-button" class="btn">Summary</button>
+                <button class="btn" id="clear-cart"><i class="material-icons icon">clear</i> Clear</button>
+            </div>
+            `)
 
     } else {
         cartList.append($('<li>Your basket is empty</li>'))
