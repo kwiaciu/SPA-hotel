@@ -10,11 +10,12 @@ export const editRoom = (room, quantity, stringDates) => {
     editRoom
         .append(`
         <article class="room-container">
-            <figure class="room-photo">
-                <img class="img" src="${room.imgsrc}" alt="Photo of room">
-            </figure>
+ 
             <div class="room-data">
-                <h3 class="room-header">${room.name}</h3>
+            <figure class="room-photo">
+            <img class="img" src="${room.imgsrc}" alt="Photo of room">
+            </figure>
+            <h3 class="room-header">${room.name}</h3>
                 <p class="room-desc">${room.desc}</p>
                 <div class="room-info">
                     <ul>
@@ -38,9 +39,11 @@ export const editRoom = (room, quantity, stringDates) => {
         // .append(`<p class="unavailable">Room not available on selected dates</p>`)
         .append(`<p id='price'>Total price for room: ${parseInt(room.price) * parseInt(quantity)} </p>`)
         .append($(dateInputCart(firstDay, lastDay, room.id)))
-        .append(`<button id="${room.id}-add-edit" class="btn cart-add edit" disabled>Save</button>`)
-        .append(`<button id="${room.id}-delete" class="btn delete">Delete from cart</button>`)
-        .append('<button class="btn cancel">Cancel changes</button>')
+        .append(`<div class="edit-buttons">
+        <button id="${room.id}-add-edit" class="btn cart-add edit" disabled>Save</button>
+        <button id="${room.id}-delete" class="btn delete">Delete from cart</button>
+        <button class="btn cancel">Cancel changes</button>
+        </div>`)
 
     $(editRoom).on('change', () => {
         $('#price').text(`Total price for room:  ${parseInt(room.price) * parseInt($('#departure-date-cart').attr('data-quantity'))}`)

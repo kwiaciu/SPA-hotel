@@ -11,66 +11,77 @@
   h2 {
     width: max(200px, 33%);
   }
+}
 
-  .treatments-list {
-    width: 100%;
+.treatments-list,
+#edit-cart {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  .treatment-li {
+    width: calc(50% - 1rem);
+    height: 350px;
+    margin: 1rem 0rem 2rem 1rem;
     display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-around;
 
-    .treatment-li {
-      width: calc(50% - 1rem);
-      height: 350px;
-      margin: 1rem 0rem 2rem 1rem;
+    background-position: center;
+    background-size: cover;
+
+    .treatment-container {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-
-      background-position: center;
-      background-size: cover;
-
-      button {
-        // display: none;
+      background-color: rgba(255, 255, 255, 0.6);
+      // display: none;
+      figure {
+        width: 100%;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
       }
-      .treatment-container {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.6);
-        // display: none;
 
-        .treatment-data {
-          display: none;
-          .treatment-info {
-            display: flex;
-            justify-content: space-evenly;
-            font-style: italic;
-            li {
-              //   margin: 1rem;
-              //   @include dark-text-background();
-              p {
-                display: inline;
-              }
-              //   display: flex;
-              //   flex-direction: row;
+      .treatment-data {
+        display: none;
+
+        .price {
+          display: flex;
+          align-items: center;
+          padding-right: 2rem;
+
+          .btn {
+            padding: 1.5rem;
+          }
+          i {
+            font-size: 1rem;
+            font-weight: 400;
+          }
+          h3 {
+            font-size: 1.5rem;
+            flex-grow: 3;
+            @include dark-text-background();
+            text-align: right;
+          }
+        }
+
+        .treatment-info {
+          display: flex;
+          justify-content: space-evenly;
+          font-style: italic;
+          li {
+            //   margin: 1rem;
+            //   @include dark-text-background();
+            p {
+              display: inline;
             }
+            //   display: flex;
+            //   flex-direction: row;
           }
         }
       }
-    }
-  }
-  .price {
-    display: flex;
-    align-items: center;
-    padding-right: 2rem;
-    i {
-      font-size: 1rem;
-      font-weight: 400;
-    }
-    h3 {
-      font-size: 1.5rem;
-      flex-grow: 3;
-      @include dark-text-background();
-      text-align: right;
     }
   }
 

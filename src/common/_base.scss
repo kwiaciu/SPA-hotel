@@ -4,7 +4,7 @@ body {
   background-color: colors.$light-grey;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  position: absolute;
+  // position: absolute;
   *::selection {
     background-color: colors.$dark-olive-green;
   }
@@ -80,10 +80,19 @@ ul {
   top: 0.1rem;
 }
 
+#profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  position: fixed;
+  top: calc(12vh);
+  right: 0;
+}
+
 section {
   padding-top: 4rem;
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 100px;
 }
 
 .list-group {
@@ -198,5 +207,6 @@ button:hover {
 
 .footer {
   margin: 1rem;
+  padding-top: 1rem;
   text-align: center;
 }

@@ -12,5 +12,9 @@ export const cartSummaryOverlay = () => {
         $(cartSummaryOverlay).off('click', '.close-summary')
     })
 
+    $(document).keyup(function (e) {
+        if (e.key === "Escape") { $('.close-summary').trigger("click") };   // esc
+    });
+
     return cartSummaryOverlay
 }

@@ -4,75 +4,7 @@
 @use 'cart/cart';
 @use 'rooms/rooms';
 @use 'treatments/treatments';
-
-#profile-sidebar {
-  display: flex;
-  flex-direction: column;
-  z-index: 5;
-  position: fixed;
-  top: calc(12vh);
-  right: 0;
-}
-
-.overlay {
-  background-color: colors.$black-transparent;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 19;
-  cursor: pointer;
-
-  #login-page {
-    background-color: colors.$dark-olive-green;
-    background-color: colors.$light-grey;
-    background-color: colors.$black;
-    background-color: #59544b;
-    color: colors.$black;
-    color: colors.$light-grey;
-    z-index: 12;
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 300px;
-    max-width: 50%;
-    cursor: default;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  form {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    * {
-      margin: 0.5rem;
-    }
-  }
-}
-
-#judgement {
-  text-align: center;
-  color: colors.$light-grey;
-  background-color: colors.$black;
-  position: absolute;
-  top: 80px;
-  left: 300px;
-  width: 100px;
-  // height: 100px;
-}
-
-#svg-circle {
-  height: 50px;
-  width: 50px;
-  position: relative;
-}
+@use 'profile/profile.scss';
 
 #contact {
   width: 100vw;
@@ -101,16 +33,4 @@
       text-align: right;
     }
   }
-}
-
-.red {
-  stroke: red !important;
-}
-
-.yellow {
-  stroke: yellow;
-}
-
-.green {
-  stroke: yellowgreen;
 }

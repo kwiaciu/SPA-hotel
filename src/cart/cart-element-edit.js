@@ -30,7 +30,6 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
     $('main').on("click", "#cart-room-edit", function (event) {
         if (!($(event.target).is("button"))) {
             if (!document.getElementById('edit-cart').contains(event.target)) {
-                console.log('removed')
                 $("#cart-room-edit").remove();
                 $('main').off("click", "#cart-room-edit");
                 $('main').off("click", ".edit");
@@ -43,6 +42,8 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
         cart.removeFromCart({ "id": buttonId });
         $(cartEditContainer).remove();
         $(cartEditContainer).off("click", cartEditContainer);
+        $('main').off("click", "#cart-room-edit");
+        $('main').off("click", ".edit");
         customAlert('Removed from cart');
     })
 
@@ -54,6 +55,7 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
     })
 
     $('main').on('click', '.edit', function () {
+        console.log('this')
         const buttonId = $(this).attr('id').slice(0, 3);
         if (cartElementId.charAt(0) === "1") {
             const quantity = $('#departure-date-cart').attr('data-quantity')
@@ -64,9 +66,6 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
                 "quantity": quantity,
                 "dates": dates
             });
-            $("#cart-room-edit").remove();
-            $('main').off('click', '.edit');
-            $('main').off('click', "#cart-room-edit");
             customAlert('Room was updated')
         } else if (cartElementId.charAt(0) === "5") {
             cart.removeFromCart({ "id": buttonId })
@@ -74,10 +73,14 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
             cart.addToCart({ "id": buttonId, "quantity": newQuantity });
             customAlert('Treatment was updated')
         }
+        $("#cart-room-edit").remove();
+        $('.cancel').trigger('click');
+        $('main').off('click', '.edit');
+        $('main').off('click', "#cart-room-edit");
     });
 
-    $('main').keyup(function (e) {
-        if (e.keyCode === 27) { $('main').trigger("click", ".cancel") };   // esc
+    $(document).keyup(function (e) {
+        if (e.key === "Escape") { $('.cancel').trigger("click") };   // esc
     });
 
 

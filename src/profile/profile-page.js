@@ -26,9 +26,10 @@ export const profilePage = (user) => {
     $(profilePage).find('ul').on('click', 'button', (event) => {
         const target = $(event.target);
         const id = target.attr('id').slice(7);
-        console.log(id)
         $(profilePage).children('section').addClass('hidden')
+        $('#profile-nav').find('button').removeClass('active')
         $('#' + id).removeClass('hidden')
+        $('#button-' + id).addClass('active')
     })
 
 

@@ -32,9 +32,14 @@ export const cartList = () => {
                         )
                 } else if (cartCookieElement.id.charAt(0) === "5") {
                     databaseAccess.getTreatment(cartCookieElement.id)
-                        .then(treatment => cartList
-                            .prepend(cartListItem(treatment, cartCookieElement.quantity)
-                            ))
+                        .then(treatment => {
+                            cartList
+                                .prepend(cartListItem(treatment, cartCookieElement.quantity));
+                            total += treatment.price * cartCookieElement.quantity
+                            totalPrice.html(`Total: ${total}<i>ћ
+                            </i>`)
+                        }
+                        )
                 } else {
                     console.warn('error')
                 }
@@ -44,7 +49,7 @@ export const cartList = () => {
             .append(`
             <div class="buttons">
                 <button id="summary-button" class="btn">Summary</button>
-                <button class="btn" id="clear-cart"><i class="material-icons icon">clear</i> Clear</button>
+                <button class="btn" id="clear-cart"><i class="material-icons icon">remove_shopping_cart</i> Clear</button>
             </div>
             `)
 

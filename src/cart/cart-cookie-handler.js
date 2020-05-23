@@ -41,13 +41,18 @@ export class Cart {
     addToCart(value) {
         const currentCart = this.getValue();
         const attendanceTest = (cartElement => value.id === cartElement.id)
+        let response = ''
         if (currentCart.some(attendanceTest)) {
             const i = currentCart.findIndex(attendanceTest)
             currentCart[i].quantity = parseInt(currentCart[i].quantity) + parseInt(value.quantity);
+            response = 'Added another treatment of the same type'
         } else {
             currentCart.push(value);
+            response = 'Treatment added to cart';
         }
         this.setValue(currentCart);
+        return (response)
+
     }
 
     // INPUT VALUE IS OBJECT {id: 123, quantity: 123, dates: ['','']}

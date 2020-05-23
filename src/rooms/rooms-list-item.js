@@ -33,7 +33,5 @@ export const roomsListItem = (room) => {
             </div>
         </article>
         `)
-        .append(``)
-        .append(``)
     return li;
 };

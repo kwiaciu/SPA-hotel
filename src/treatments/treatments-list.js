@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { databaseAccess } from '../common/database-access';
 import { treatmentsListItem } from './treatments-list-item';
 import { Cart } from '../cart/cart-cookie-handler';
+import { customAlert } from '../common/custom-alert';
 
 
 export const treatmentsList = () => {
@@ -16,7 +17,8 @@ export const treatmentsList = () => {
   // Event handlers
   $(ul).on('click', 'button', function () {
     const buttonId = $(this).attr('id').slice(0, 3);
-    cart.addToCart({ "id": buttonId, "quantity": 1 });
+    const response = cart.addToCart({ "id": buttonId, "quantity": 1 });
+    customAlert(response)
   });
 
   $(ul).on({
