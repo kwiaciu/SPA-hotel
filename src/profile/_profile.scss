@@ -18,6 +18,23 @@
     margin: 0 auto;
     padding: 2rem 0 0 0;
   }
+
+  #cart-summary {
+    width: 100%;
+    height: auto;
+    background-color: colors.$light-grey;
+    &,
+    h3,
+    h4,
+    li {
+      color: colors.$black;
+      border-color: colors.$black;
+    }
+
+    .close-summary {
+      display: none;
+    }
+  }
 }
 
 .overlay {

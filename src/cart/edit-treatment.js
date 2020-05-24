@@ -31,7 +31,7 @@ export const editTreatment = (treatment, quantity) => {
         // .append(`<p class="unavailable">Room not available on selected dates</p>`)
         .append(`<p id='price'>Total price: ${parseInt(treatment.price) * parseInt(quantity)}ћ </p>`)
         .append(`<div class="edit-buttons">
-        <button id="${treatment.id}-add-edit" class="btn cart-add edit" disabled>Save</button>
+        <button id="${treatment.id}-add-edit" class="btn cart-add save" disabled>Save</button>
         <button id="${treatment.id}-delete" class="btn delete">Delete from cart</button>
         <button class="btn cancel">Cancel</button>
         </div>`)

@@ -40,7 +40,7 @@ export const editRoom = (room, quantity, stringDates) => {
         .append(`<p id='price'>Total price for room: ${parseInt(room.price) * parseInt(quantity)} </p>`)
         .append($(dateInputCart(firstDay, lastDay, room.id)))
         .append(`<div class="edit-buttons">
-        <button id="${room.id}-add-edit" class="btn cart-add edit" disabled>Save</button>
+        <button id="${room.id}-add-edit" class="btn cart-add save" disabled>Save</button>
         <button id="${room.id}-delete" class="btn delete">Delete from cart</button>
         <button class="btn cancel">Cancel changes</button>
         </div>`)

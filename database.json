@@ -21,10 +21,10 @@
       "price": 170,
       "imgsrc": "../dist/hotel01.jpg",
       "occupied": [
-        "2020-05-01",
-        "2020-05-02",
-        "2020-05-05",
-        "2020-05-06"
+        "2020-06-01",
+        "2020-06-02",
+        "2020-06-05",
+        "2020-06-06"
       ]
     },
     {
@@ -46,10 +46,10 @@
       "price": 240,
       "imgsrc": "../dist/hotel03.jpg",
       "occupied": [
-        "2020-05-01",
-        "2020-05-02",
-        "2020-05-05",
-        "2020-05-06"
+        "2020-06-01",
+        "2020-06-02",
+        "2020-06-05",
+        "2020-06-06"
       ]
     },
     {
@@ -110,8 +110,8 @@
   "treatments": [
     {
       "id": "501",
-      "name": "Masaż rozgrzanym monitorem",
-      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet co",
+      "name": "Surface peeling treatment",
+      "desc": "Surface peel is biologically active, biphase exfoliating mixture, which reduces the skin surface roughness, heals acne, reduces small wrinkles and brightens hiperpigmentation in the epidermis and the surface between epidermis and dermis.",
       "area": "back",
       "time": 30,
       "price": 80,
@@ -119,8 +119,8 @@
     },
     {
       "id": "502",
-      "name": "Biczowanie kablem od myszy",
-      "desc": "Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
+      "name": "Whole body shell masssage",
+      "desc": "An unbelievably relaxing massage with the warm sea shells and all the richness that the sea has to offer.",
       "area": "back",
       "time": 20,
       "price": 70,
@@ -128,8 +128,8 @@
     },
     {
       "id": "503",
-      "name": "Peeling odłamkami płyty CD",
-      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis  elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
+      "name": "Anti-age golden truffle",
+      "desc": "Luxurious anti-aging treatment with 24-carat gold and white truffle",
       "area": "face",
       "time": 15,
       "price": 50,
@@ -137,8 +137,8 @@
     },
     {
       "id": "504",
-      "name": "Pedicure woskiem z USB",
-      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere ",
+      "name": "Hot oils back massage",
+      "desc": "Alleviates muscular tensions, heals stress, moisturizes and soothes your skin.",
       "area": "legs",
       "time": 25,
       "price": 100,
@@ -146,8 +146,8 @@
     },
     {
       "id": "505",
-      "name": "Manicure analogowo-cyfrowy",
-      "desc": "Lorem ipsum, Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
+      "name": "Power therapy",
+      "desc": "Therapy with strong hydrating effect using low and high molecular weight hyaluronic acid. Long lasting hydration on all skin levels.",
       "area": "hands",
       "time": 45,
       "price": 150,
@@ -155,8 +155,8 @@
     },
     {
       "id": "506",
-      "name": "Kąpiel w gorącej kawie",
-      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis ",
+      "name": "Cleansing treatment",
+      "desc": "It is recommended for people with skin problems, whose shin is prone to inflammation, purulent lesions and blackheads. It effectively reduces acne changes, smoothes and regenerates the epidermis and prevents appearance of further lesions.",
       "area": "body",
       "time": 60,
       "price": 200,
@@ -164,8 +164,8 @@
     },
     {
       "id": "507",
-      "name": "Depilacja dyskiem twardym",
-      "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing ",
+      "name": "Prevent skin aging",
+      "desc": "Increase renewing skin, improving firmness, smoothing wrinkless and minimizing pores. Treatment is using 4 thechniques of peeling, included 50% of acids.",
       "area": "body",
       "time": 45,
       "price": 120,

@@ -6,6 +6,7 @@ import { Cart } from './cart-cookie-handler';
 import { customAlert } from '../common/custom-alert';
 import { editRoom } from './edit-room';
 import { editTreatment } from './edit-treatment';
+import { cartSummary } from './cart-summary';
 
 export const cartElementEdit = (cartElementId, quantity, stringDates) => {
     const cart = new Cart();
@@ -27,12 +28,13 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
 
     // ==EVENT HANDLERS== //
 
+    // click outside div to close
     $('main').on("click", "#cart-room-edit", function (event) {
         if (!($(event.target).is("button"))) {
             if (!document.getElementById('edit-cart').contains(event.target)) {
                 $("#cart-room-edit").remove();
                 $('main').off("click", "#cart-room-edit");
-                $('main').off("click", ".edit");
+                $('main').off("click", ".save");
             }
         }
     })
@@ -43,19 +45,19 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
         $(cartEditContainer).remove();
         $(cartEditContainer).off("click", cartEditContainer);
         $('main').off("click", "#cart-room-edit");
-        $('main').off("click", ".edit");
+        $('main').off("click", ".save");
         customAlert('Removed from cart');
     })
 
     $('main').on("click", ".cancel", function (event) {
         $('.overlay').remove();
         $('main').off("click", "#cart-room-edit");
-        $('main').off("click", ".edit");
+        $('main').off("click", ".save");
 
     })
 
-    $('main').on('click', '.edit', function () {
-        console.log('this')
+    //saving changes
+    $('main').on('click', '.save', function () {
         const buttonId = $(this).attr('id').slice(0, 3);
         if (cartElementId.charAt(0) === "1") {
             const quantity = $('#departure-date-cart').attr('data-quantity')
@@ -73,10 +75,32 @@ export const cartElementEdit = (cartElementId, quantity, stringDates) => {
             cart.addToCart({ "id": buttonId, "quantity": newQuantity });
             customAlert('Treatment was updated')
         }
+
         $("#cart-room-edit").remove();
         $('.cancel').trigger('click');
-        $('main').off('click', '.edit');
+        $('main').off('click', '.save');
         $('main').off('click', "#cart-room-edit");
+        if ($('#cart-summary').length && $('#cart-summary-overlay').length && $('#profile-page').length) {
+            const hidden = $('#profile-page').find('#cart-summary').hasClass('hidden')
+            $('#cart-summary').remove()
+            $('#cart-summary').remove()
+            $('#profile-page').append(cartSummary());
+            if (hidden) { $('#cart-summary').addClass('hidden') }
+            $('#cart-summary-overlay').append(cartSummary());
+
+        } else if ($('#cart-summary').length && $('#cart-summary-overlay').length) {
+            $('#cart-summary').remove()
+            $('#cart-summary-overlay').append(cartSummary());
+        } else if ($('#cart-summary').length && $('#profile-page').length) {
+            const hidden = $('#profile-page').find('#cart-summary').hasClass('hidden')
+            $('#cart-summary').remove()
+            $('#profile-page').append(cartSummary());
+            if (hidden) { $('#cart-summary').addClass('hidden') }
+
+        } else {
+            console.log('else')
+        }
+
     });
 
     $(document).keyup(function (e) {

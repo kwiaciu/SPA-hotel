@@ -23,7 +23,7 @@ export const profilePage = (user) => {
     // $(profilePage).children('section').addClass('hidden')
 
 
-    $(profilePage).find('ul').on('click', 'button', (event) => {
+    $(profilePage).find('.nav-list').on('click', 'button', (event) => {
         const target = $(event.target);
         const id = target.attr('id').slice(7);
         $(profilePage).children('section').addClass('hidden')
