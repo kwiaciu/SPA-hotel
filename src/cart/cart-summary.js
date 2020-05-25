@@ -4,6 +4,8 @@ import { Login } from '../login/login-cookie-handler';
 import { databaseAccess } from '../common/database-access';
 import { order } from './order';
 import { Cart } from './cart-cookie-handler';
+import { reloadSummary } from './reload-summary';
+import { customAlert } from '../common/custom-alert';
 
 export const cartSummary = () => {
     // logged user handling 
@@ -43,10 +45,19 @@ export const cartSummary = () => {
     }
     // ==EVENT HANDLERS== //
 
+
     $(cartSummary).on('click', '#order', function () {
         $(cartSummary).empty();
         $(cartSummary).append(order(userData))
     })
+
+    $(cartSummary).on('click', '#clear-cart', function () {
+        cartCookie.empty();
+        reloadSummary();
+        customAlert('Cart cleared!')
+    });
+
+
 
 
     return cartSummary

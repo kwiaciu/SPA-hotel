@@ -1,36 +1,37 @@
 import { databaseAccess } from '../common/database-access';
 import { Login } from './login-cookie-handler';
+import { customAlert } from '../common/custom-alert';
 
-export const checkPassword = (login,pass) => {
-    //TODO: change console.logs to dom elements to show to user
-    if (typeof(login)==='string' && typeof(pass)==='string' && login.length > 3 && pass.length > 3 ){
-        databaseAccess.getUser(login).then( response => {
-            console.log(response);
+export const checkPassword = (login, pass) => {
+    if (typeof (login) === 'string' && typeof (pass) === 'string' && login.length > 3 && pass.length > 3) {
+        databaseAccess.getUser(login).then(response => {
+            // console.log(response);
             if (response.status == '404') {
-            console.log('User not found')
-            
-            } else {
-            const userPass = response.data.password;
-            if ( userPass === pass) {
-                const cookie = new Login();
-                console.log('logging in')
-                cookie.setValue({"login": login});
-                location.reload();
+                customAlert('User not found')
 
-                // console.log(cookie.getValue());
-                // add info to cookies that user is now logged
-                // redirect to 'profile' again which now will be displaying user data
             } else {
-                console.log('Incorrect password')
-                
+                const userPass = response.data.password;
+                if (userPass === pass) {
+                    const cookie = new Login();
+                    cookie.setValue({ "login": login });
+                    location.reload();
+                    customAlert('Logged in')
+
+                    // console.log(cookie.getValue());
+                    // add info to cookies that user is now logged
+                    // redirect to 'profile' again which now will be displaying user data
+                } else {
+                    customAlert('Incorrect password')
+
+                }
+
+
             }
-
-            
-            }})
+        })
     } else {
-        console.log('Incorrect login data')
+        customAlert('Incorrect login data')
     }
-    
+
 }
-    
+
 // TODO: https://www.npmjs.com/package/json-

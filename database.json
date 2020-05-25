@@ -9,12 +9,30 @@
       "code": "12-345",
       "phone": "987654321",
       "previousOrders": []
+    },
+    {
+      "id": "asdf@adsfa",
+      "password": "asd",
+      "mail": "asdf@adsfa",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "123@124123",
+      "password": "asd",
+      "mail": "123@124123",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
     }
   ],
   "rooms": [
     {
       "id": "101",
-      "name": "Pokój unarny",
+      "name": "Single room 01",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus quas dolore ea obcaecati, esse beatae rerum, cum tenetur! Deleniti, fugit ad?",
       "beds": 1,
       "guests": 1,
@@ -29,7 +47,7 @@
     },
     {
       "id": "102",
-      "name": "Pokój unarny premium",
+      "name": "Single room premium",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
       "beds": 1,
       "guests": 1,
@@ -39,7 +57,7 @@
     },
     {
       "id": "103",
-      "name": "Pokój binarny",
+      "name": "Binary room",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimusfacere eveniet in iste velit laudantium expedita possimus",
       "beds": 1,
       "guests": 2,
@@ -54,7 +72,7 @@
     },
     {
       "id": "104",
-      "name": "Pokój binarny deluxe",
+      "name": "Room 0x2",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
       "beds": 1,
       "guests": 2,
@@ -64,7 +82,7 @@
     },
     {
       "id": "105",
-      "name": "Pokój trójkowy",
+      "name": "Three humans room",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus",
       "beds": 2,
       "guests": 3,
@@ -74,7 +92,7 @@
     },
     {
       "id": "106",
-      "name": "Pokój trójkowy v4.2",
+      "name": "Three beings room",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus. Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "beds": 2,
       "guests": 3,
@@ -88,7 +106,7 @@
     },
     {
       "id": "107",
-      "name": "Pokój czwórkowy",
+      "name": "Four bedroom suite",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus.",
       "beds": 4,
       "guests": 4,
@@ -98,7 +116,7 @@
     },
     {
       "id": "108",
-      "name": "Pokój czwórkowy 113",
+      "name": "Four beds room",
       "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis debitis facere eveniet in iste velit laudantium expedita possimus. Lorem ipsum, dolor sit amet consectetur",
       "beds": 4,
       "guests": 4,

@@ -37,8 +37,10 @@ export const order = (userData) => {
 
     orderForm
         .append(mail, phone, city, street, postcode)
-        .append('<button class="btn" class="submit" type="submit">Submit</button>')
-        .append('<button class="btn cancel" type="button">Cancel</button>');
+        .append(`<div class="buttons">
+        <button class="btn" class="submit" type="submit">Submit</button>
+        <button class="btn cancel" type="button">Cancel</button>
+        </div>`);
     orderPage.append(orderForm);
     orderFormHandler(orderPage)
 

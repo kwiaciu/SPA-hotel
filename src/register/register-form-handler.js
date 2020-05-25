@@ -29,7 +29,7 @@ export const registerFormHandler = (container) => {
             };
             checkRegisterForm(data)
 
-            console.log('submit')
+            // console.log('submit')
         }
     });
 }

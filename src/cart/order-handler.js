@@ -23,9 +23,8 @@ export const orderFormHandler = (container) => {
             "phone": phone,
             "previousOrders": [JSON.stringify(cartValue)],
         };
-        customAlert('New order created. Nothing more happened.')
         setTimeout(() => {
-            customAlert('You can check it in console if you want')
+            customAlert('New order created. Nothing more happened.')
         }, 2250)
         $('#cart-summary').remove();
         $('#cart-summary-overlay').remove();

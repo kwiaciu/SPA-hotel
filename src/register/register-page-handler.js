@@ -7,7 +7,7 @@ export const registerPageHandler = (register) => {
             $('main').off("click", "#register");
             $('main').off("submit", "#register-form");
         } else {
-            console.log('else')
+            // console.log('else')
         }
     })
 }

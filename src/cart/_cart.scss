@@ -6,6 +6,38 @@
   color: colors.$light-grey;
 }
 
+#order-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+
+  input {
+    height: 1.5rem;
+  }
+
+  * {
+    margin: 0.5rem;
+  }
+
+  button {
+    width: auto;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+#final-summary {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .edit,
+  .delete {
+    display: none;
+  }
+}
+
 #cart {
   background-color: colors.$dark-grey;
   color: colors.$light-grey;
@@ -110,7 +142,7 @@
 
 #cart-summary {
   background-color: colors.$dark-grey;
-  width: 75%;
+  width: 60%;
   height: 80vh;
   margin: auto;
   overflow: auto;

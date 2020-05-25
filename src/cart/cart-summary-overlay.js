@@ -7,6 +7,17 @@ export const cartSummaryOverlay = () => {
     cartSummaryOverlay.append(cartSummary())
 
     // ==EVENT HANDLERS== //
+    $('main').on("click", "#cart-summary-overlay", function (event) {
+        if (!($(event.target).is("button"))) {
+            if (!document.getElementById('cart-summary').contains(event.target)) {
+                $("#cart-summary-overlay").remove();
+                $('main').off("click", "#cart-summary-overlay");
+                $('main').off("click", ".close-summary");
+            }
+        }
+    })
+
+
     $(cartSummaryOverlay).on('click', '.close-summary', function () {
         $('#cart-summary-overlay').remove();
         $(cartSummaryOverlay).off('click', '.close-summary')

@@ -4,7 +4,7 @@ import { Cart } from './cart-cookie-handler';
 
 export const orderSummary = (data) => {
     const cart = new Cart();
-    const orderSummary = $('<section></section>')
+    const orderSummary = $('<section id="final-summary"></section>')
     orderSummary.append(`
     <h2>Order confirmation</h2>
     <article>

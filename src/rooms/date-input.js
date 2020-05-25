@@ -43,7 +43,7 @@ export const dateInput = () => {
             $('#rooms-list').find(".room-li").each(function () {
                 const id = $(this).attr('id').slice(0, 3);
                 $(this).css('order', id);
-                $(this).css('background-color', '');
+                // $(this).css('background-color', '');
                 $(this).find('button').prop('disabled', false);
                 $(this).find('.unavailable').addClass('hidden');
             });
@@ -62,7 +62,7 @@ export const dateInput = () => {
         occupiedRooms.then(occRooms => {
             occRooms.map(room => {
                 const li = $(`#${room}-add`).parent();
-                $(li).css('background-color', '#302d258a');
+                // $(li).css('background-color', '#302d258a');
                 $(li).css('order', `1${room}`);
                 $(li).find('button').prop('disabled', true);
                 $(li).find('.unavailable').removeClass('hidden');

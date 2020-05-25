@@ -20,8 +20,10 @@
   }
 
   #cart-summary {
-    width: 100%;
+    // width: 100%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: colors.$light-grey;
     &,
     h3,
@@ -49,10 +51,20 @@
   z-index: 19;
   cursor: pointer;
 
-  #login-page {
-    background-color: colors.$dark-olive-green;
+  #register-page {
     background-color: colors.$light-grey;
-    background-color: colors.$black;
+    color: colors.$black;
+    z-index: 12;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    max-width: 50%;
+    cursor: default;
+  }
+
+  #login-page {
     background-color: #59544b;
     color: colors.$black;
     color: colors.$light-grey;

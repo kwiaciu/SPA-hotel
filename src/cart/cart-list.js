@@ -5,6 +5,7 @@ import { Cart } from './cart-cookie-handler';
 import { cartElementEdit } from './cart-element-edit';
 import { cartSummaryOverlay } from './cart-summary-overlay';
 import { customAlert } from '../common/custom-alert';
+import { reloadSummary } from './reload-summary';
 
 
 export const cartList = () => {
@@ -63,6 +64,7 @@ export const cartList = () => {
     $(cartList).on('click', '.delete', function () {
         const buttonId = $(this).attr('id').slice(0, 3);
         cart.removeFromCart({ "id": buttonId });
+        reloadSummary();
         // $('.overlay').remove();
         customAlert('Room removed from cart');
 
