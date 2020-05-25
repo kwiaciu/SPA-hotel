@@ -1,8 +1,8 @@
-`## SPA
+## SPA
 
-Single page application for hotel/spa:
+Single page application for hotel/spa.
 
-#Requirements:
+# Requirements:
 
 - Browsing treatments and adding to cart
 - Browsing rooms and adding to cart
