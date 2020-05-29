@@ -27,6 +27,24 @@
       "street": "adsf",
       "phone": "134567688",
       "previousOrders": []
+    },
+    {
+      "id": "123@121244241241",
+      "password": "a",
+      "mail": "123@121244241241",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
+    },
+    {
+      "id": "123@124123124124e",
+      "password": "1234asdf",
+      "mail": "123@124123124124e",
+      "city": "213",
+      "street": "adsf",
+      "phone": "134567688",
+      "previousOrders": []
     }
   ],
   "rooms": [
@@ -37,7 +55,7 @@
       "beds": 1,
       "guests": 1,
       "price": 170,
-      "imgsrc": "../dist/hotel01.jpg",
+      "imgsrc": "./hotel01.jpg",
       "occupied": [
         "2020-06-01",
         "2020-06-02",
@@ -52,7 +70,7 @@
       "beds": 1,
       "guests": 1,
       "price": 200,
-      "imgsrc": "../dist/hotel02.jpg",
+      "imgsrc": "./hotel02.jpg",
       "occupied": []
     },
     {
@@ -62,7 +80,7 @@
       "beds": 1,
       "guests": 2,
       "price": 240,
-      "imgsrc": "../dist/hotel03.jpg",
+      "imgsrc": "./hotel03.jpg",
       "occupied": [
         "2020-06-01",
         "2020-06-02",
@@ -77,7 +95,7 @@
       "beds": 1,
       "guests": 2,
       "price": 270,
-      "imgsrc": "../dist/hotel04.jpg",
+      "imgsrc": "./hotel04.jpg",
       "occupied": []
     },
     {
@@ -87,7 +105,7 @@
       "beds": 2,
       "guests": 3,
       "price": 290,
-      "imgsrc": "../dist/hotel05.jpg",
+      "imgsrc": "./hotel05.jpg",
       "occupied": []
     },
     {
@@ -97,7 +115,7 @@
       "beds": 2,
       "guests": 3,
       "price": 340,
-      "imgsrc": "../dist/hotel06.jpg",
+      "imgsrc": "./hotel06.jpg",
       "occupied": [
         "2020-05-06",
         "2020-05-07",
@@ -111,7 +129,7 @@
       "beds": 4,
       "guests": 4,
       "price": 340,
-      "imgsrc": "../dist/hotel07.jpg",
+      "imgsrc": "./hotel07.jpg",
       "occupied": []
     },
     {
@@ -121,7 +139,7 @@
       "beds": 4,
       "guests": 4,
       "price": 530,
-      "imgsrc": "../dist/hotel08.jpg",
+      "imgsrc": "./hotel08.jpg",
       "occupied": []
     }
   ],
@@ -133,7 +151,7 @@
       "area": "back",
       "time": 30,
       "price": 80,
-      "imgsrc": "../dist/spa01.jpg"
+      "imgsrc": "./spa01.jpg"
     },
     {
       "id": "502",
@@ -142,7 +160,7 @@
       "area": "back",
       "time": 20,
       "price": 70,
-      "imgsrc": "../dist/spa02.jpg"
+      "imgsrc": "./spa02.jpg"
     },
     {
       "id": "503",
@@ -151,7 +169,7 @@
       "area": "face",
       "time": 15,
       "price": 50,
-      "imgsrc": "../dist/spa03.jpg"
+      "imgsrc": "./spa03.jpg"
     },
     {
       "id": "504",
@@ -160,7 +178,7 @@
       "area": "legs",
       "time": 25,
       "price": 100,
-      "imgsrc": "../dist/spa04.jpg"
+      "imgsrc": "./spa04.jpg"
     },
     {
       "id": "505",
@@ -169,7 +187,7 @@
       "area": "hands",
       "time": 45,
       "price": 150,
-      "imgsrc": "../dist/spa05.jpg"
+      "imgsrc": "./spa05.jpg"
     },
     {
       "id": "506",
@@ -178,7 +196,7 @@
       "area": "body",
       "time": 60,
       "price": 200,
-      "imgsrc": "../dist/spa06.jpg"
+      "imgsrc": "./spa06.jpg"
     },
     {
       "id": "507",
@@ -187,7 +205,7 @@
       "area": "body",
       "time": 45,
       "price": 120,
-      "imgsrc": "../dist/spa07.jpg"
+      "imgsrc": "./spa07.jpg"
     }
   ]
 }
