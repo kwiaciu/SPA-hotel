@@ -15,10 +15,10 @@ export const sectionRooms = () => {
     sectionRooms
         .append(`
         <figure class="">
-            <img class="room-carousel img" src="../dist/hotel07.jpg" alt="room photo">
-            <img class="room-carousel img invisible" src="../dist/hotel01.jpg" alt="room photo">
-            <img class="room-carousel img invisible" src="../dist/hotel05.jpg" alt="room photo">
-            <img class="room-carousel img invisible" src="../dist/hotel02.jpg" alt="room photo">
+            <img class="room-carousel img" src="./hotel07.jpg" alt="room photo">
+            <img class="room-carousel img invisible" src="./hotel01.jpg" alt="room photo">
+            <img class="room-carousel img invisible" src="./hotel05.jpg" alt="room photo">
+            <img class="room-carousel img invisible" src="./hotel02.jpg" alt="room photo">
         </figure>
         `)
     roomsDiv

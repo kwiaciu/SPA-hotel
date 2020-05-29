@@ -3,7 +3,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
 
-
 const htmlPlugin = new HTMLWebpackPlugin({ template: './src/index.html' });
 const copyPlugin = new CopyWebpackPlugin([{ from: './src/assets' }]);
 const baseHrefPlugin = new BaseHrefWebpackPlugin({ baseHref: '/' })

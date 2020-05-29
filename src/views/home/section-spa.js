@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 import { routeChange } from '../../router/route-change';
 import { routes } from '../../router/routes';
 
@@ -17,9 +16,9 @@ export const sectionSpa = () => {
     sectionSpa
         .append(`
         <figure class="carousel">
-                <img class="img" src="../dist/spa03.jpg" alt="spa photo">
-                <img class="img" src="../dist/spa07.jpg" alt="spa photo">
-                <img class="img" src="../dist/spa10.jpg" alt="spa photo">
+                <img class="img" src="./spa03.jpg" alt="spa photo">
+                <img class="img" src="./spa07.jpg" alt="spa photo">
+                <img class="img" src="./spa10.jpg" alt="spa photo">
         </figure>`)
         .append(spaDiv);
     return sectionSpa
